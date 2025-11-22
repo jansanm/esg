@@ -1,0 +1,214 @@
+import type { Metadata } from 'next';
+import Header from '@/components/common/Header';
+import PricingInteractive from './components/PricingInteractive';
+import Icon from '@/components/ui/AppIcon';
+
+export const metadata: Metadata = {
+  title: 'Pricing & ROI Calculator - EcoVeraZ',
+  description: 'Transparent pricing tiers and interactive ROI calculator for EcoVeraZ ESG verification platform. Calculate your audit-time reduction, cost savings, and carbon credit yield improvements with our enterprise-grade verification solution.',
+};
+
+export default function PricingAndROICalculatorPage() {
+  const benefits = [
+    {
+      icon: 'ShieldCheckIcon',
+      title: 'No Hidden Fees',
+      description: 'All costs transparent upfront with no surprise charges',
+    },
+    {
+      icon: 'ClockIcon',
+      title: 'Flexible Contracts',
+      description: 'Monthly or annual billing with no long-term lock-in',
+    },
+    {
+      icon: 'CurrencyDollarIcon',
+      title: 'Volume Discounts',
+      description: 'Enterprise pricing scales with your verification needs',
+    },
+    {
+      icon: 'ChartBarIcon',
+      title: 'ROI Guarantee',
+      description: 'Measurable value delivery or money-back assurance',
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+
+      <main className="w-full">
+        <section className="bg-gradient-to-br from-primary/10 via-background to-brand-primary/10 py-16 md:py-24">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="text-center max-w-4xl mx-auto">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6">
+                <Icon name="SparklesIcon" size={16} className="text-primary" />
+                <span className="text-sm font-cta text-primary">
+                  Transparent Value Calculation
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-headline-bold text-foreground mb-6">
+                Pricing & ROI Calculator
+              </h1>
+              <p className="text-lg md:text-xl font-body text-text-secondary mb-8">
+                Discover how EcoVeraZ delivers measurable ROI through automated verification, reduced audit times, and improved carbon credit yields. Calculate your specific savings with our interactive ROI tool.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a
+                  href="#pricing"
+                  className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-cta-bold text-sm hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-hover transition-smooth"
+                >
+                  View Pricing Plans
+                </a>
+                <a
+                  href="#calculator"
+                  className="px-8 py-3 bg-card text-foreground border border-border rounded-lg font-cta-bold text-sm hover:bg-muted transition-smooth"
+                >
+                  Calculate Your ROI
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-card border-y border-border">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="bg-background border border-border rounded-xl p-6 hover:shadow-card transition-smooth"
+                >
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Icon name={benefit.icon as any} size={24} className="text-primary" />
+                  </div>
+                  <h3 className="text-lg font-headline font-headline-bold text-foreground mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-sm font-body text-text-secondary">
+                    {benefit.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing" className="py-16 md:py-24">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <PricingInteractive />
+          </div>
+        </section>
+
+        <section className="py-16 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-headline font-headline-bold text-foreground mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-lg font-body text-text-secondary max-w-3xl mx-auto">
+                Common questions about EcoVeraZ pricing and ROI
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto space-y-4">
+              {[
+                {
+                  question: 'What is included in the monthly pricing?',
+                  answer: 'All plans include IoT sensor integration, blockchain anchoring, compliance reporting, framework alignment, API access, and technical support. Higher tiers add advanced analytics, custom mapping, and dedicated account management.',
+                },
+                {
+                  question: 'How is ROI calculated?',
+                  answer: 'ROI calculations factor in audit-time reduction (65% average), cost savings from automated verification (45% average), improved carbon credit yields (18% average), and reduced compliance risk. Industry-specific multipliers adjust for sector complexity.',
+                },
+                {
+                  question: 'Can I switch plans after starting?',
+                  answer: 'Yes, you can upgrade or downgrade at any time. Upgrades take effect immediately, while downgrades apply at the next billing cycle. No penalties for plan changes.',
+                },
+                {
+                  question: 'What is the pilot program guarantee?',
+                  answer: 'Our 90-day pilot program includes a full refund if EcoVeraZ does not deliver measurable ROI through reduced audit times, cost savings, or improved credit yields. We stand behind our proof-first approach.',
+                },
+                {
+                  question: 'Are there setup or implementation fees?',
+                  answer: 'Pilot and Enterprise plans include standard implementation. Global Scale deployments may have custom setup fees based on complexity, but these are transparent and agreed upfront.',
+                },
+                {
+                  question: 'How does pricing scale for large enterprises?',
+                  answer: 'Global Scale pricing is customized based on site count, sensor volume, framework requirements, and support needs. Volume discounts apply, and we offer flexible payment terms for multi-year commitments.',
+                },
+              ].map((faq, index) => (
+                <details
+                  key={index}
+                  className="bg-card border border-border rounded-xl p-6 hover:shadow-card transition-smooth group"
+                >
+                  <summary className="flex items-center justify-between cursor-pointer list-none">
+                    <h3 className="text-lg font-headline font-headline-bold text-foreground pr-4">
+                      {faq.question}
+                    </h3>
+                    <Icon
+                      name="ChevronDownIcon"
+                      size={20}
+                      className="text-text-secondary group-open:rotate-180 transition-smooth flex-shrink-0"
+                    />
+                  </summary>
+                  <p className="text-sm font-body text-text-secondary mt-4 leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-24 bg-gradient-to-br from-brand-dark via-foreground to-brand-dark text-white">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-headline font-headline-bold mb-4">
+              Ready to Transform Your ESG Verification?
+            </h2>
+            <p className="text-lg font-body opacity-90 max-w-3xl mx-auto mb-8">
+              Join leading enterprises using EcoVeraZ to deliver audit-grade verification with measurable ROI. Start with a risk-free pilot program today.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-cta-bold text-sm hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-hover transition-smooth">
+                Request Demo
+              </button>
+              <button className="px-8 py-3 bg-white/10 text-white border border-white/20 rounded-lg font-cta-bold text-sm hover:bg-white/20 transition-smooth">
+                Download Pricing Guide
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="bg-card border-t border-border py-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm font-body text-text-secondary text-center md:text-left">
+              &copy; {new Date().getFullYear()} EcoVeraZ. All rights reserved. Patent-backed verification technology.
+            </p>
+            <div className="flex items-center gap-6">
+              <a
+                href="/standards-and-compliance"
+                className="text-sm font-body text-text-secondary hover:text-primary transition-smooth"
+              >
+                Standards & Compliance
+              </a>
+              <a
+                href="/proof-and-case-studies"
+                className="text-sm font-body text-text-secondary hover:text-primary transition-smooth"
+              >
+                Case Studies
+              </a>
+              <a
+                href="/platform-overview"
+                className="text-sm font-body text-text-secondary hover:text-primary transition-smooth"
+              >
+                Platform Overview
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
