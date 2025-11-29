@@ -56,7 +56,7 @@ const ExportCapabilities = ({ className = '' }: ExportCapabilitiesProps) => {
         'ERP system integration',
         'Custom analytics workflows',
         'Data warehouse ingestion',
-        'Machine learning model training'
+        'Machine Abouting model training'
       ]
     },
     {

@@ -39,7 +39,7 @@ const FeaturesOverview = () => {
     {
       id: 4,
       title: 'AI Validation',
-      description: 'Automated anomaly detection and data quality assurance powered by machine learning.',
+      description: 'Automated anomaly detection and data quality assurance powered by machine Abouting.',
       icon: 'CpuChipIcon',
       link: '/platform-overview',
       stats: '99.9% accuracy',

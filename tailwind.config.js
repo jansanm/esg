@@ -75,9 +75,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        headline: ['Inter', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
-        cta: ['Inter', 'sans-serif'],
+        headline: ['Poppins', 'sans-serif'],
+        body: ['Poppins', 'sans-serif'],
+        cta: ['Poppins', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       fontWeight: {

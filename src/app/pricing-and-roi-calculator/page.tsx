@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Header from '@/components/common/Header';
 import PricingInteractive from './components/PricingInteractive';
+import PricingHero from './components/PricingHero';
+import PricingSelector from './components/PricingSelector';
 import Icon from '@/components/ui/AppIcon';
 
 export const metadata: Metadata = {
@@ -37,40 +39,10 @@ export default function PricingAndROICalculatorPage() {
       <Header />
 
       <main className="w-full">
-        <section className="bg-gradient-to-br from-primary/10 via-background to-brand-primary/10 py-16 md:py-24">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="text-center max-w-4xl mx-auto">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6">
-                <Icon name="SparklesIcon" size={16} className="text-primary" />
-                <span className="text-sm font-cta text-primary">
-                  Transparent Value Calculation
-                </span>
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-headline-bold text-foreground mb-6">
-                Pricing & ROI Calculator
-              </h1>
-              <p className="text-lg md:text-xl font-body text-text-secondary mb-8">
-                Discover how EcoVeraZ delivers measurable ROI through automated verification, reduced audit times, and improved carbon credit yields. Calculate your specific savings with our interactive ROI tool.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a
-                  href="#pricing"
-                  className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-cta-bold text-sm hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-hover transition-smooth"
-                >
-                  View Pricing Plans
-                </a>
-                <a
-                  href="#calculator"
-                  className="px-8 py-3 bg-card text-foreground border border-border rounded-lg font-cta-bold text-sm hover:bg-muted transition-smooth"
-                >
-                  Calculate Your ROI
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PricingHero />
+        <PricingSelector />
 
-        <section className="py-16 bg-card border-y border-border">
+        <section className="py-16 bg-card border-y border-border mt-12">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
