@@ -14,53 +14,76 @@ const PlatformHero = ({ className = '' }: PlatformHeroProps) => {
       </div>
       
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-primary/10 rounded-full">
-              <Icon name="ShieldCheckIcon" size={20} className="text-primary" variant="solid" />
-              <span className="text-sm font-body-medium text-primary">Patent-Backed Technology</span>
-            </div>
-            
+        {/* Verified by Design Section */}
+        <div className="space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
             <h1 className="text-4xl lg:text-5xl font-headline font-headline-bold text-foreground leading-tight">
-              From Sensor to Certificate:<br />
-              <span className="text-primary">Verified ESG Evidence</span>
+              Verified by Design
             </h1>
-            
             <p className="text-lg text-text-secondary font-body leading-relaxed">
-              Transform environmental data verification from claims-based to proof-based through blockchain-anchored evidence. Our comprehensive platform bridges IoT sensors, AI validation, and investor-grade certification in one seamless pipeline.
+              Each module is patent-pending, forming a unified, verifiable sustainability ecosystem built on seven core principles.
             </p>
-            
-            <div className="flex flex-wrap gap-4 pt-4">
-              <button className="px-6 py-3 bg-primary text-primary-foreground font-cta-bold rounded-lg hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-hover transition-smooth flex items-center space-x-2">
-                <span>Explore Interactive Demo</span>
-                <Icon name="PlayIcon" size={20} className="text-current" variant="solid" />
-              </button>
-              <button className="px-6 py-3 bg-card border-2 border-border text-foreground font-cta rounded-lg hover:border-primary hover:text-primary transition-smooth flex items-center space-x-2">
-                <span>View Technical Docs</span>
-                <Icon name="DocumentTextIcon" size={20} className="text-current" />
-              </button>
-            </div>
           </div>
-          
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-modal border border-border bg-card">
-              <AppImage
-                src="https://images.unsplash.com/photo-1717037536218-abb38d2305a9"
-                alt="Modern data visualization dashboard showing real-time environmental monitoring graphs with green and blue color scheme on multiple screens"
-                className="w-full h-auto" />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6 space-y-3">
-                <div className="flex items-center space-x-2 text-white">
-                  <Icon name="CheckCircleIcon" size={24} className="text-success" variant="solid" />
-                  <span className="font-body-medium">Real-Time Verification Active</span>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                id: 'P1',
+                title: 'IoT Integrity',
+                desc: 'Data envelopes are chained and anchored to deter tampering.',
+                icon: 'SignalIcon'
+              },
+              {
+                id: 'P2',
+                title: 'Carbon Issuance',
+                desc: 'Issuance flows link claims to verifiable evidence and live badges.',
+                icon: 'TicketIcon'
+              },
+              {
+                id: 'P3',
+                title: 'Supply Chain',
+                desc: 'Scope snapshots unify supplier data with anomaly-aware coverage.',
+                icon: 'TruckIcon'
+              },
+              {
+                id: 'P4',
+                title: 'Verifier Network',
+                desc: 'Field capture includes identity, time, and place with reviewer reputation.',
+                icon: 'UserGroupIcon'
+              },
+              {
+                id: 'P5',
+                title: 'AI Advisor',
+                desc: 'Explainable ESG scoring identifies gaps and recommended remediations.',
+                icon: 'CpuChipIcon'
+              },
+              {
+                id: 'P6',
+                title: 'Smart Bidding',
+                desc: 'Procurement ranking that weights verifiable ESG credentials alongside price.',
+                icon: 'ChartBarIcon'
+              },
+              {
+                id: 'P7',
+                title: 'Badge Engine',
+                desc: 'Dynamic seals with QR/URL link to live verification pages.',
+                icon: 'ShieldCheckIcon'
+              }
+            ].map((item) => (
+              <div key={item.id} className="bg-card border border-border rounded-xl p-6 hover:shadow-xl hover:border-primary hover:bg-primary transition-all duration-300 group cursor-pointer">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-white/20 transition-colors">
+                    <Icon name={item.icon as any} size={24} className="text-primary group-hover:text-white transition-colors" />
+                  </div>
+                  <span className="text-xs font-bold text-primary/60 bg-primary/5 px-2 py-1 rounded group-hover:bg-white/20 group-hover:text-white transition-colors">{item.id}</span>
                 </div>
-                <div className="flex items-center space-x-2 text-white/90">
-                  <Icon name="CubeTransparentIcon" size={20} className="text-secondary" />
-                  <span className="text-sm font-body">Blockchain Anchored: 2,847 Proofs Today</span>
-                </div>
+                <h3 className="text-lg font-headline-bold text-foreground mb-2 group-hover:text-white transition-colors">{item.title}</h3>
+                <p className="text-sm text-text-secondary mb-4 min-h-[40px] group-hover:text-white/90 transition-colors">{item.desc}</p>
+                <button className="text-primary text-sm font-cta-bold flex items-center gap-1 group-hover:gap-2 group-hover:text-white transition-all">
+                  Learn more <Icon name="ArrowRightIcon" size={14} />
+                </button>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

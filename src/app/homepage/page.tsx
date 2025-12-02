@@ -2,12 +2,13 @@ import type { Metadata } from 'next';
 import Header from '@/components/common/Header';
 import HeroSection from './components/HeroSection';
 import AlignmentStrip from './components/AlignmentStrip';
+import LiveDashboard3D from './components/LiveDashboard3D';
 import TrustStrip from './components/TrustStrip';
 import RoleBasedNavigation from './components/RoleBasedNav';
 import SocialProofCarousel from './components/SocialProofCarousel';
 import FeaturesOverview from './components/FeaturesOverview';
 import CTASection from './components/CTASection';
-import Footer from './components/Footer';
+import Footer from '@/components/common/Footer';
 
 export const metadata: Metadata = {
   title: 'EcoVeraZ - Enterprise ESG Verification Platform | Blockchain-Anchored Proof',
@@ -21,6 +22,7 @@ export default function Homepage() {
       <main>
         <HeroSection />
         <AlignmentStrip />
+        <LiveDashboard3D />
         <TrustStrip />
         <RoleBasedNavigation />
         <SocialProofCarousel />

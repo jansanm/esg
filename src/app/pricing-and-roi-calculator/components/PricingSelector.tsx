@@ -138,16 +138,16 @@ const PricingSelector = () => {
       </div>
 
       {/* Filters Row */}
-      <div className="flex flex-col sm:flex-row gap-10 items-start sm:items-center">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-start lg:items-center">
         {/* Country Selector with Search */}
-        <div className="flex items-center gap-5">
-          <span className="text-sm font-bold text-gray-500 uppercase tracking-wider leading-tight">
-            SELECT <br/> COUNTRY/TERRITORY
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-5 w-full lg:w-auto">
+          <span className="text-sm font-bold text-gray-500 uppercase tracking-wider leading-tight whitespace-nowrap">
+            SELECT <br className="hidden sm:block"/> COUNTRY/TERRITORY
           </span>
-          <div className="relative" ref={dropdownRef}>
+          <div className="relative w-full sm:w-auto" ref={dropdownRef}>
             <button
               onClick={() => setIsCountryDropdownOpen(!isCountryDropdownOpen)}
-              className="appearance-none bg-gray-100 border border-gray-200 text-gray-700 py-3 pl-5 pr-12 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent min-w-[240px] text-left text-base font-medium"
+              className="appearance-none bg-gray-100 border border-gray-200 text-gray-700 py-3 pl-5 pr-12 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent w-full sm:w-auto sm:min-w-[240px] text-left text-base font-medium"
             >
               {country}
             </button>
@@ -199,14 +199,14 @@ const PricingSelector = () => {
         </div>
 
         {/* Currency Selector */}
-        <div className="flex items-center gap-5">
-          <span className="text-sm font-bold text-gray-500 uppercase tracking-wider leading-tight">
-            SELECT <br/> CURRENCY
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-5 w-full lg:w-auto">
+          <span className="text-sm font-bold text-gray-500 uppercase tracking-wider leading-tight whitespace-nowrap">
+            SELECT <br className="hidden sm:block"/> CURRENCY
           </span>
-          <div className="flex border border-gray-200 rounded-md overflow-hidden">
+          <div className="flex border border-gray-200 rounded-md overflow-hidden w-full sm:w-auto">
             <button
               onClick={() => setCurrency('USD')}
-              className={`px-5 py-3 text-base font-medium transition-colors ${
+              className={`flex-1 sm:flex-none px-5 py-3 text-base font-medium transition-colors ${
                 currency === 'USD' 
                   ? 'bg-gray-200 text-gray-900' 
                   : 'bg-white text-gray-500 hover:bg-gray-50'
@@ -216,7 +216,7 @@ const PricingSelector = () => {
             </button>
             <button
               onClick={() => setCurrency('EUR')}
-              className={`px-5 py-3 text-base font-medium transition-colors ${
+              className={`flex-1 sm:flex-none px-5 py-3 text-base font-medium transition-colors ${
                 currency === 'EUR' 
                   ? 'bg-gray-200 text-gray-900' 
                   : 'bg-white text-gray-500 hover:bg-gray-50'

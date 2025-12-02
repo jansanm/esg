@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Header from '@/components/common/Header';
 import ProofInteractive from './components/ProofInteractive';
+import Footer from '@/components/common/Footer';
 
 export const metadata: Metadata = {
   title: 'Proof & Case Studies - EcoVeraZ Platform',
@@ -12,6 +13,7 @@ export default function ProofAndCaseStudiesPage() {
     <>
       <Header />
       <ProofInteractive />
+      <Footer />
     </>
   );
 }

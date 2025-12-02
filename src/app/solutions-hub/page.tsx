@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Header from '@/components/common/Header';
 import SolutionsInteractive from './components/SolutionsInteractive';
+import Footer from '@/components/common/Footer';
 
 export const metadata: Metadata = {
   title: 'Solutions Hub - EcoVeraZ Platform',
@@ -12,6 +13,7 @@ export default function SolutionsHubPage() {
     <>
       <Header />
       <SolutionsInteractive />
+      <Footer />
     </>
   );
 }

@@ -7,7 +7,7 @@ import FrameworkMapping from './components/FrameworkMapping';
 import SecurityCertifications from './components/SecurityCertifications';
 import ExportCapabilities from './components/ExportCapabilities';
 import ComplianceCTA from './components/ComplianceCTA';
-import Footer from './components/Footer';
+import Footer from '@/components/common/Footer';
 
 export const metadata: Metadata = {
   title: 'Standards & Compliance - EcoVeraZ',

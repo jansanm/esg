@@ -75,6 +75,107 @@ const TechnicalResources = ({ className = '' }: TechnicalResourcesProps) => {
   return (
     <section className={`bg-muted ${className}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+        {/* VSIP at a Glance Section */}
+        <div className="mb-24">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl lg:text-4xl font-headline font-headline-bold text-foreground mb-4">
+              VSIP at a Glance
+            </h2>
+            <p className="text-lg text-text-secondary font-body">
+              The path from raw telemetry to public proof. Each step is verifiable, leaving a complete audit trail.
+            </p>
+          </div>
+
+          {/* Process Flow */}
+          <div className="relative mb-12">
+            {/* Connecting Line (Desktop) */}
+            <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2 z-0" />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 relative z-10">
+              {[
+                { step: 'Capture', sub: 'IoT / Suppliers', icon: 'SignalIcon' },
+                { step: 'Chain', sub: 'Anchor & Sequence', icon: 'LinkIcon' },
+                { step: 'Score', sub: 'Explainable Checks', icon: 'CalculatorIcon' },
+                { step: 'Issue', sub: 'Badges & Disclosures', icon: 'CheckBadgeIcon' },
+                { step: 'Publish', sub: 'TrustStrip', icon: 'GlobeAltIcon' }
+              ].map((item, index) => (
+                <div key={index} className="bg-card border border-border rounded-xl p-6 text-center hover:border-primary hover:shadow-lg transition-all duration-300 group relative">
+                  {/* Arrow for Desktop */}
+                  {index < 4 && (
+                    <div className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-20 bg-muted rounded-full p-1 border border-border text-text-secondary">
+                      <Icon name="ChevronRightIcon" size={16} />
+                    </div>
+                  )}
+                  
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <Icon name={item.icon as any} size={24} className="text-primary group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-headline font-headline-bold text-foreground mb-1">
+                    {item.step}
+                  </h3>
+                  <p className="text-sm text-text-secondary font-body">
+                    {item.sub}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Details Grid */}
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-card border border-border rounded-xl p-6 hover:shadow-md transition-smooth">
+              <h4 className="text-base font-headline font-headline-bold text-foreground mb-4 flex items-center gap-2">
+                <Icon name="DocumentDuplicateIcon" size={20} className="text-primary" />
+                Evidence
+              </h4>
+              <ul className="space-y-2">
+                <li className="text-sm text-text-secondary font-body flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                  Signed data envelopes (hash, ts, origin)
+                </li>
+                <li className="text-sm text-text-secondary font-body flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                  Supplier attestations, field proof
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-card border border-border rounded-xl p-6 hover:shadow-md transition-smooth">
+              <h4 className="text-base font-headline font-headline-bold text-foreground mb-4 flex items-center gap-2">
+                <Icon name="ShieldCheckIcon" size={20} className="text-primary" />
+                Controls
+              </h4>
+              <ul className="space-y-2">
+                <li className="text-sm text-text-secondary font-body flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                  Deduplication, anomaly detection
+                </li>
+                <li className="text-sm text-text-secondary font-body flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                  Governance policy checks
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-card border border-border rounded-xl p-6 hover:shadow-md transition-smooth">
+              <h4 className="text-base font-headline font-headline-bold text-foreground mb-4 flex items-center gap-2">
+                <Icon name="ArrowTopRightOnSquareIcon" size={20} className="text-primary" />
+                Outputs
+              </h4>
+              <ul className="space-y-2">
+                <li className="text-sm text-text-secondary font-body flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                  Live badge & public page
+                </li>
+                <li className="text-sm text-text-secondary font-body flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                  API & procurement signals
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-headline font-headline-bold text-foreground mb-4">
             Technical Resources

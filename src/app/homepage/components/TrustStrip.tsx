@@ -1,168 +1,264 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Icon from '@/components/ui/AppIcon';
 
-interface ProofBadge {
-  id: number;
-  type: string;
-  status: 'verified' | 'anchored' | 'certified';
-  timestamp: string;
-  hash: string;
-}
-
 const TrustStrip = () => {
-  const [isHydrated, setIsHydrated] = useState(false);
-  const [selectedBadge, setSelectedBadge] = useState<number | null>(null);
-
-  useEffect(() => {
-    setIsHydrated(true);
-  }, []);
-
-  const proofBadges: ProofBadge[] = [
-    {
-      id: 1,
-      type: 'Carbon Emission',
-      status: 'verified',
-      timestamp: '2025-11-21T14:30:00Z',
-      hash: '0x7a8f9b2c...',
-    },
-    {
-      id: 2,
-      type: 'Water Usage',
-      status: 'anchored',
-      timestamp: '2025-11-21T13:15:00Z',
-      hash: '0x4d6e8a1f...',
-    },
-    {
-      id: 3,
-      type: 'Energy Consumption',
-      status: 'certified',
-      timestamp: '2025-11-21T12:00:00Z',
-      hash: '0x9c3b5f7e...',
-    },
-    {
-      id: 4,
-      type: 'Waste Management',
-      status: 'verified',
-      timestamp: '2025-11-21T11:45:00Z',
-      hash: '0x2e7d4a9c...',
-    },
-  ];
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'verified':
-        return 'text-success bg-success/10 border-success/30';
-      case 'anchored':
-        return 'text-brand-secondary bg-brand-secondary/10 border-brand-secondary/30';
-      case 'certified':
-        return 'text-primary bg-primary/10 border-primary/30';
-      default:
-        return 'text-muted-foreground bg-muted border-border';
-    }
-  };
-
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'verified':
-        return 'CheckCircleIcon';
-      case 'anchored':
-        return 'LinkIcon';
-      case 'certified':
-        return 'DocumentCheckIcon';
-      default:
-        return 'ClockIcon';
-    }
-  };
-
   return (
-    <section className="bg-card border-y border-border py-12">
+    <section className="bg-card py-12">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground mb-4">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-brand-secondary to-primary bg-300% animate-gradient">
+            End-to-End Verification Workflow
+          </span>
+        </h2>
+        <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+          Seamlessly orchestrating ESG data from source to immutable proof.
+        </p>
+      </div>
+
+      {/* Full Screen Workflow Image */}
+      <div className="w-full max-w-5xl mx-auto mb-12">
+        <Image
+          src="/esg-workfloww.png"
+          alt="ESG Workflow Process"
+          width={1024}
+          height={427}
+          className="w-full h-auto"
+          priority
+        />
+      </div>
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-8">
+        <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 px-4 py-2 bg-primary/5 border border-primary/20 rounded-full mb-4">
-            <Icon name="ShieldCheckIcon" size={20} className="text-primary" variant="solid" />
-            <span className="text-sm font-body-medium text-primary">Live Proof Verification</span>
+            <Icon name="ShieldCheckIcon" size={20} className="text-primary" variant="outline" />
+            <span className="text-sm font-body-medium text-primary">Trust Built on Technology</span>
           </div>
-          <h2 className="text-2xl lg:text-3xl font-headline font-headline-bold text-foreground mb-3">
-            Real-Time Anchor Receipts
+          <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground mb-4">
+            Every feature designed to deliver <br className="hidden md:block" />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-brand-secondary to-primary bg-300% animate-gradient">
+              verifiable, tamper-proof sustainability data
+            </span>
           </h2>
-          <p className="text-base text-text-secondary font-body max-w-2xl mx-auto">
-            Every verification is blockchain-anchored with immutable proof. Click any badge to view the complete audit trail.
-          </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {proofBadges.map((badge) => (
-            <button
-              key={badge.id}
-              onClick={() => isHydrated && setSelectedBadge(badge.id)}
-              className="group relative bg-card border border-border hover:border-primary/50 rounded-xl p-6 transition-smooth hover:shadow-card text-left"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div
-                  className={`flex items-center justify-center w-12 h-12 rounded-lg ${getStatusColor(
-                    badge.status
-                  )} border transition-smooth`}
-                >
-                  <Icon
-                    name={getStatusIcon(badge.status) as any}
-                    size={24}
-                    className="text-current"
-                    variant="solid"
-                  />
-                </div>
-                <Icon
-                  name="ArrowTopRightOnSquareIcon"
-                  size={16}
-                  className="text-muted-foreground group-hover:text-primary transition-smooth"
-                />
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Card 1 */}
+          <div className="group relative p-8 bg-card border border-border rounded-2xl transition-all duration-300 hover:bg-success hover:border-success hover:shadow-xl flex flex-col h-full">
+            <div className="w-14 h-14 rounded-xl bg-success/10 flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
+              <Icon name="ClipboardDocumentCheckIcon" size={28} className="text-success group-hover:text-white transition-colors" variant="outline" />
+            </div>
+            <h3 className="text-xl font-headline font-bold text-foreground mb-3 group-hover:text-white transition-colors">Audit‑ready</h3>
+            <p className="text-text-secondary text-base leading-relaxed mb-8 group-hover:text-white/90 transition-colors flex-grow">
+              Evidence‑first architecture ensuring every data point is traceable and ready for external verification.
+            </p>
+            <div className="mt-auto">
+              <Icon name="ArrowRightIcon" size={24} className="text-muted-foreground group-hover:text-white transition-colors" variant="outline" />
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="group relative p-8 bg-card border border-border rounded-2xl transition-all duration-300 hover:bg-success hover:border-success hover:shadow-xl flex flex-col h-full">
+            <div className="w-14 h-14 rounded-xl bg-success/10 flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
+              <Icon name="LockClosedIcon" size={28} className="text-success group-hover:text-white transition-colors" variant="outline" />
+            </div>
+            <h3 className="text-xl font-headline font-bold text-foreground mb-3 group-hover:text-white transition-colors">Controlled Transparency</h3>
+            <p className="text-text-secondary text-base leading-relaxed mb-8 group-hover:text-white/90 transition-colors flex-grow">
+              Share safely with granular permission controls, protecting sensitive IP while proving sustainability claims.
+            </p>
+            <div className="mt-auto">
+              <Icon name="ArrowRightIcon" size={24} className="text-muted-foreground group-hover:text-white transition-colors" variant="outline" />
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="group relative p-8 bg-card border border-border rounded-2xl transition-all duration-300 hover:bg-success hover:border-success hover:shadow-xl flex flex-col h-full">
+            <div className="w-14 h-14 rounded-xl bg-success/10 flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
+              <Icon name="SparklesIcon" size={28} className="text-success group-hover:text-white transition-colors" variant="outline" />
+            </div>
+            <h3 className="text-xl font-headline font-bold text-foreground mb-3 group-hover:text-white transition-colors">Patent‑pending IP</h3>
+            <p className="text-text-secondary text-base leading-relaxed mb-8 group-hover:text-white/90 transition-colors flex-grow">
+              Innovation‑backed technology that sets new standards for data integrity and automated verification.
+            </p>
+            <div className="mt-auto">
+              <Icon name="ArrowRightIcon" size={24} className="text-muted-foreground group-hover:text-white transition-colors" variant="outline" />
+            </div>
+          </div>
+
+          {/* Card 4 */}
+          <div className="group relative p-8 bg-card border border-border rounded-2xl transition-all duration-300 hover:bg-success hover:border-success hover:shadow-xl flex flex-col h-full">
+            <div className="w-14 h-14 rounded-xl bg-success/10 flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
+              <Icon name="CheckBadgeIcon" size={28} className="text-success group-hover:text-white transition-colors" variant="outline" />
+            </div>
+            <h3 className="text-xl font-headline font-bold text-foreground mb-3 group-hover:text-white transition-colors">Real‑time Trust</h3>
+            <p className="text-text-secondary text-base leading-relaxed mb-8 group-hover:text-white/90 transition-colors flex-grow">
+              Live badges and dynamic certificates that update instantly as new data is verified and anchored.
+            </p>
+            <div className="mt-auto">
+              <Icon name="ArrowRightIcon" size={24} className="text-muted-foreground group-hover:text-white transition-colors" variant="outline" />
+            </div>
+          </div>
+        </div>
+
+        {/* Core Principles Section */}
+        <div className="mt-24 text-center">
+          <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground mb-4">
+            Core Principles
+          </h2>
+          <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-16">
+            Built on three foundational pillars that ensure data integrity and trust at every level
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Integrity Card */}
+            <div className="group p-8 bg-card border border-border hover:border-success/50 rounded-3xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="w-16 h-16 mx-auto rounded-2xl bg-success/10 flex items-center justify-center mb-6 group-hover:bg-success/20 transition-colors">
+                <Icon name="LockClosedIcon" size={32} className="text-success" variant="outline" />
               </div>
+              <h3 className="text-xl font-headline font-bold text-foreground mb-4">Integrity</h3>
+              <p className="text-text-secondary text-base leading-relaxed">
+                Data envelopes are chained and anchored with cryptographic verification to ensure tamper-proof records.
+              </p>
+            </div>
 
-              <h3 className="text-base font-body-medium text-foreground mb-2 group-hover:text-primary transition-smooth">
-                {badge.type}
-              </h3>
+            {/* Governance Card */}
+            <div className="group p-8 bg-card border border-border hover:border-success/50 rounded-3xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="w-16 h-16 mx-auto rounded-2xl bg-success/10 flex items-center justify-center mb-6 group-hover:bg-success/20 transition-colors">
+                <Icon name="ScaleIcon" size={32} className="text-success" variant="outline" />
+              </div>
+              <h3 className="text-xl font-headline font-bold text-foreground mb-4">Governance</h3>
+              <p className="text-text-secondary text-base leading-relaxed">
+                <span className="font-semibold text-foreground">Explainable AI</span> scoring identifies gaps and provides actionable remediation plans.
+              </p>
+            </div>
 
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <span
-                    className={`inline-flex items-center px-2 py-1 text-xs font-body-medium rounded-md ${getStatusColor(
-                      badge.status
-                    )} border capitalize`}
-                  >
-                    {badge.status}
+            {/* Trust Card */}
+            <div className="group p-8 bg-card border border-border hover:border-success/50 rounded-3xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="w-16 h-16 mx-auto rounded-2xl bg-success/10 flex items-center justify-center mb-6 group-hover:bg-success/20 transition-colors">
+                <Icon name="ShieldCheckIcon" size={32} className="text-success" variant="outline" />
+              </div>
+              <h3 className="text-xl font-headline font-bold text-foreground mb-4">Trust</h3>
+              <p className="text-text-secondary text-base leading-relaxed">
+                Dynamic badges link to <span className="italic text-foreground">live verification pages</span> with real-time validation and audit trails.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Globally Recognized Frameworks Section */}
+        <div className="mt-24">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground mb-4">
+              Globally Recognized Frameworks
+            </h2>
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-8">
+              Seamlessly integrate with all major sustainability standards and regulatory requirements
+            </p>
+            
+            <div className="inline-block max-w-3xl mx-auto p-6 bg-success/5 rounded-2xl border border-success/10 backdrop-blur-sm">
+              <h3 className="text-lg font-headline font-bold text-success mb-2">Built for Global Sustainability Standards</h3>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                EcoVeraZ ensures compliance with major frameworks. Our platform simplifies complex regulatory requirements into actionable insights.
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-border overflow-hidden bg-border">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px">
+              {[
+                { id: 'CSRD', name: 'EU Corporate Sustainability Reporting' },
+                { id: 'SFDR', name: 'Sustainable Finance Disclosure' },
+                { id: 'SEC', name: 'Climate Disclosure Rules' },
+                { id: 'GRI', name: 'Global Reporting Initiative' },
+                { id: 'SASB', name: 'Sustainability Accounting Board' },
+                { id: 'TCFD', name: 'Climate-related Financial Disclosure' },
+                { id: 'BRSR', name: 'Business Responsibility Reporting' },
+                { id: 'ISO 14064', name: 'Carbon Accounting Standard' },
+              ].map((framework) => (
+                <div 
+                  key={framework.id} 
+                  className="bg-card p-8 flex flex-col items-center text-center hover:bg-success/5 transition-all duration-300 group cursor-default"
+                >
+                  <span className="text-3xl font-headline font-bold text-foreground mb-3 group-hover:text-success group-hover:scale-110 transition-all duration-300">
+                    {framework.id}
+                  </span>
+                  <span className="text-sm font-medium text-text-secondary group-hover:text-foreground transition-colors duration-300">
+                    {framework.name}
                   </span>
                 </div>
-
-                <div className="flex items-center space-x-2 text-xs text-muted-foreground font-mono">
-                  <Icon name="LinkIcon" size={14} className="text-current" />
-                  <span className="truncate">{badge.hash}</span>
-                </div>
-              </div>
-
-              {selectedBadge === badge.id && isHydrated && (
-                <div className="absolute inset-0 bg-primary/5 border-2 border-primary rounded-xl pointer-events-none" />
-              )}
-            </button>
-          ))}
+              ))}
+            </div>
+          </div>
         </div>
 
-        <div className="mt-8 text-center">
-          <p className="text-sm text-muted-foreground font-body mb-4">
-            All verifications are cryptographically secured and publicly auditable
-          </p>
-          <div className="flex items-center justify-center space-x-6">
-            <div className="flex items-center space-x-2">
-              <Icon name="ClockIcon" size={16} className="text-success" />
-              <span className="text-xs text-text-secondary font-body">Real-time Updates</span>
+        {/* Why Choose EcoVeraZ Section */}
+        <div className="mt-24">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground mb-4">
+              Why Choose EcoVeraZ?
+            </h2>
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+              See how our platform compares to traditional sustainability solutions
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Traditional Ratings Card */}
+            <div className="p-8 bg-card border border-border rounded-3xl opacity-80 hover:opacity-100 transition-opacity duration-300">
+              <h3 className="text-xl font-headline font-bold text-foreground mb-6">Traditional ratings</h3>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start space-x-3">
+                  <Icon name="XMarkIcon" size={20} className="text-muted-foreground mt-1" variant="outline" />
+                  <span className="text-text-secondary">Static annual/quarterly scorecards</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Icon name="XMarkIcon" size={20} className="text-muted-foreground mt-1" variant="outline" />
+                  <span className="text-text-secondary">Primarily disclosure-based</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Icon name="XMarkIcon" size={20} className="text-muted-foreground mt-1" variant="outline" />
+                  <span className="text-text-secondary">Limited supplier/field capture</span>
+                </li>
+              </ul>
             </div>
-            <div className="flex items-center space-x-2">
-              <Icon name="LockClosedIcon" size={16} className="text-brand-secondary" variant="solid" />
-              <span className="text-xs text-text-secondary font-body">Immutable Records</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Icon name="GlobeAltIcon" size={16} className="text-primary" />
-              <span className="text-xs text-text-secondary font-body">Global Standards</span>
+
+            {/* EcoVeraZ Verification Card */}
+            <div className="relative p-8 bg-card border-2 border-success/20 rounded-3xl shadow-2xl shadow-success/5 overflow-hidden group hover:border-success/40 transition-all duration-300">
+              <div className="absolute top-0 right-0 p-4 opacity-10">
+                <Icon name="CheckBadgeIcon" size={120} className="text-success" variant="solid" />
+              </div>
+              
+              <h3 className="text-xl font-headline font-bold text-foreground mb-6 relative z-10">EcoVeraZ verification</h3>
+              <ul className="space-y-4 mb-8 relative z-10">
+                <li className="flex items-start space-x-3">
+                  <div className="mt-1 bg-success/10 p-1 rounded-full">
+                    <Icon name="CheckIcon" size={14} className="text-success" variant="outline" />
+                  </div>
+                  <span className="text-foreground font-medium">Live verification badges with QR/URL</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="mt-1 bg-success/10 p-1 rounded-full">
+                    <Icon name="CheckIcon" size={14} className="text-success" variant="outline" />
+                  </div>
+                  <span className="text-foreground font-medium">Evidence-first data envelopes (IoT → supplier → proof)</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="mt-1 bg-success/10 p-1 rounded-full">
+                    <Icon name="CheckIcon" size={14} className="text-success" variant="outline" />
+                  </div>
+                  <span className="text-foreground font-medium">Procurement ranking + compliance anchors</span>
+                </li>
+              </ul>
+
+              <div className="flex flex-col sm:flex-row items-center gap-4 relative z-10 mt-8">
+                <button className="w-full sm:w-auto px-6 py-3 rounded-xl border border-border hover:border-foreground/20 hover:bg-muted/50 text-foreground font-medium transition-all duration-300">
+                  Why verification
+                </button>
+                <button className="w-full sm:w-auto px-6 py-3 rounded-xl bg-success hover:bg-success/90 text-white font-medium shadow-lg shadow-success/20 hover:shadow-success/30 transition-all duration-300">
+                  See a live proof
+                </button>
+              </div>
             </div>
           </div>
         </div>

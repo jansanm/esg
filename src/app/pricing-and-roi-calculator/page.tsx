@@ -4,6 +4,7 @@ import PricingInteractive from './components/PricingInteractive';
 import PricingHero from './components/PricingHero';
 import PricingSelector from './components/PricingSelector';
 import Icon from '@/components/ui/AppIcon';
+import Footer from '@/components/common/Footer';
 
 export const metadata: Metadata = {
   title: 'Pricing & ROI Calculator - EcoVeraZ',
@@ -152,35 +153,7 @@ export default function PricingAndROICalculatorPage() {
         </section>
       </main>
 
-      <footer className="bg-card border-t border-border py-8">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm font-body text-text-secondary text-center md:text-left">
-              &copy; {new Date().getFullYear()} EcoVeraZ. All rights reserved. Patent-backed verification technology.
-            </p>
-            <div className="flex items-center gap-6">
-              <a
-                href="/standards-and-compliance"
-                className="text-sm font-body text-text-secondary hover:text-primary transition-smooth"
-              >
-                Standards & Compliance
-              </a>
-              <a
-                href="/proof-and-case-studies"
-                className="text-sm font-body text-text-secondary hover:text-primary transition-smooth"
-              >
-                Case Studies
-              </a>
-              <a
-                href="/platform-overview"
-                className="text-sm font-body text-text-secondary hover:text-primary transition-smooth"
-              >
-                Platform Overview
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

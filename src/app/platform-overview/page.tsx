@@ -8,7 +8,7 @@ import InteractiveDemo from './components/InteractiveDemo';
 import IntegrationPartners from './components/IntegrationPartners';
 import TechnicalResources from './components/TechnicalResources';
 import CTASection from './components/CTASection';
-import Footer from './components/Footer';
+import Footer from '@/components/common/Footer';
 
 export const metadata: Metadata = {
   title: 'Platform Overview - EcoVeraZ',
