@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import Header from '@/components/common/Header';
 import PlatformHero from './components/PlatformHero';
 import PlatformStats from './components/PlatformStats';
-import PlatformTabs from './components/PlatformTabs';
+
 import TechnicalArchitecture from './components/TechnicalArchitecture';
-import InteractiveDemo from './components/InteractiveDemo';
-import IntegrationPartners from './components/IntegrationPartners';
+
+
 import TechnicalResources from './components/TechnicalResources';
 import CTASection from './components/CTASection';
 import Footer from '@/components/common/Footer';
@@ -21,10 +21,10 @@ export default function PlatformOverviewPage() {
       <Header />
       <PlatformHero />
       <PlatformStats />
-      <PlatformTabs />
+      {/* PlatformTabs removed */}
       <TechnicalArchitecture />
-      <InteractiveDemo />
-      <IntegrationPartners />
+      {/* InteractiveDemo removed */}
+      {/* IntegrationPartners removed */}
       <TechnicalResources />
       <CTASection />
       <Footer />

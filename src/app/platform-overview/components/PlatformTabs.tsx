@@ -90,14 +90,7 @@ const PlatformTabs = ({ className = '' }: PlatformTabsProps) => {
   return (
     <section className={`bg-background ${className}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl lg:text-4xl font-headline font-headline-bold text-foreground mb-4">
-            Complete Platform Ecosystem
-          </h2>
-          <p className="text-lg text-text-secondary font-body">
-            Four integrated components working seamlessly to deliver audit-grade verification from sensor to certificate
-          </p>
-        </div>
+        {/* Heading section removed */}
 
         <div className="flex flex-wrap justify-center gap-2 mb-8 border-b border-border">
           {tabs.map((tab) =>
