@@ -54,7 +54,7 @@ const PlatformDropdown = ({ onClose }: PlatformDropdownProps) => {
         <div className="w-1/3 p-10 border-r border-gray-200 bg-gradient-to-b from-emerald-50 to-white">
           <div className="h-full flex flex-col justify-between">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">The All-in-One <br/> <span className="text-emerald-600">ESG Platform</span></h3>
+              {/* <h3 className="text-2xl font-bold text-gray-900 mb-4">The All-in-One <br/> <span className="text-emerald-600">ESG Platform</span></h3> */}
               
               {/* Management Solutions */}
               <div className="space-y-3 mb-8">
@@ -72,7 +72,7 @@ const PlatformDropdown = ({ onClose }: PlatformDropdownProps) => {
                   className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors group"
                 >
                   <Icon name="BuildingOfficeIcon" size={18} className="text-emerald-600 group-hover:text-emerald-700" />
-                  <span className="font-medium">Life Cycle Managemnet</span>
+                  <span className="font-medium">Life Cycle Assessment</span>
                 </Link>
                 <Link 
                   href="/platform-overview" 

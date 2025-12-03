@@ -18,6 +18,19 @@ module.exports = {
     },
     extend: {
       colors: {
+        emerald: {
+          50: '#f4fdf6',
+          100: '#eefcf1',
+          200: '#dcf9e3',
+          300: '#bbf2c8',
+          400: '#8ce9a0',
+          500: '#5de075', // Lighter
+          600: '#4cd964', // Brand Color (Primary Action)
+          700: '#3dae50', // Darker (Hover)
+          800: '#328e42',
+          900: '#297436',
+          950: '#153d1c',
+        },
         border: 'var(--color-border)', // gray-300
         input: 'var(--color-input)', // gray-300
         ring: 'var(--color-ring)', // green-800

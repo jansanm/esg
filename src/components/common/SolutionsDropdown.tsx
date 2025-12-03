@@ -39,25 +39,50 @@ const SolutionsDropdown = ({ onClose }: SolutionsDropdownProps) => {
       <div className="max-w-7xl mx-auto flex min-h-[400px] p-8">
         
         {/* Column 1: Compliance & Regulations */}
-        <div className="w-1/2 pr-8 border-r border-gray-200">
-          <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-2">
-            Compliance & Regulations
-          </h3>
-          <p className="text-gray-600 text-sm mb-6">
-            Stay compliant with global standards
-          </p>
-          <div className="grid grid-cols-2 gap-y-3 gap-x-2">
-            {compliance.map((item) => (
-              <Link
-                key={item.name}
-                href="/standards-and-compliance"
-                onClick={onClose}
-                className="flex items-center gap-2 text-gray-700 hover:text-primary transition-colors cursor-pointer group"
-              >
-                <Icon name={item.icon} size={18} className="text-gray-500 group-hover:text-primary" />
-                <span className="text-sm font-medium">{item.name}</span>
-              </Link>
-            ))}
+        <div className="w-1/2 pr-8 border-r border-gray-200 flex flex-col gap-8">
+          <div>
+            <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-2">
+                Compliance & Regulations
+            </h3>
+            <p className="text-gray-600 text-sm mb-6">
+                Stay compliant with global standards
+            </p>
+            <div className="grid grid-cols-2 gap-y-3 gap-x-2">
+                {compliance.map((item) => (
+                <Link
+                    key={item.name}
+                    href="/standards-and-compliance"
+                    onClick={onClose}
+                    className="flex items-center gap-2 text-gray-700 hover:text-primary transition-colors cursor-pointer group"
+                >
+                    <Icon name={item.icon} size={18} className="text-gray-500 group-hover:text-primary" />
+                    <span className="text-sm font-medium">{item.name}</span>
+                </Link>
+                ))}
+            </div>
+          </div>
+
+          {/* Compliance Engine Section */}
+          <div className="bg-emerald-50/50 rounded-xl p-5 border border-emerald-100">
+              <h4 className="text-base font-bold text-gray-900 mb-3 flex items-center gap-2">
+                <Icon name="ShieldCheckIcon" className="text-emerald-600" size={20} />
+                Compliance Engine
+              </h4>
+              
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                    <Icon name="CheckCircleIcon" className="text-emerald-600 mt-0.5 shrink-0" size={16} />
+                    <span className="text-xs text-gray-700 leading-relaxed">
+                        Automated mapping to <strong>BRSR</strong>, <strong>GHG</strong>, <strong>CSRD</strong>, and <strong>iXBRL</strong>
+                    </span>
+                </li>
+                <li className="flex items-start gap-2">
+                    <Icon name="CheckCircleIcon" className="text-emerald-600 mt-0.5 shrink-0" size={16} />
+                    <span className="text-xs text-gray-700 leading-relaxed">
+                        Governance module with roles & alerts for audit readiness
+                    </span>
+                </li>
+              </ul>
           </div>
         </div>
 

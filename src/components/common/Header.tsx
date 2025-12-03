@@ -60,14 +60,14 @@ const Header = ({ className = '' }: HeaderProps) => {
   return (
     <>
       <header 
-        className={`sticky top-0 z-50 w-full transition-all duration-300 bg-emerald-50/90 backdrop-blur-md text-gray-800 border-b border-emerald-100 shadow-sm h-20 ${className}`}
+        className={`sticky top-0 z-50 w-full transition-all duration-300 bg-white backdrop-blur-md text-gray-800 border-b border-gray-100 shadow-sm h-20 ${className}`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
           <div className="flex items-center justify-between h-full w-full">
             {/* Logo Section */}
             <div className="flex-shrink-0 flex items-center gap-8">
               <Link href="/homepage" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                <div className="relative w-36 h-9 sm:w-40 sm:h-10">
+                <div className="relative w-44 h-11 sm:w-52 sm:h-14">
                   <img
                     src="/assets/ecoveraz_logo.png"
                     alt="EcoVeraZ"
@@ -129,16 +129,26 @@ const Header = ({ className = '' }: HeaderProps) => {
             {/* Right Actions */}
           <div className="flex items-center space-x-6">
             <div className="hidden lg:flex items-center gap-6">
-              <button 
-                onClick={() => setIsSearchOpen(true)}
-                className="text-gray-600 hover:text-emerald-600 transition-colors"
+              <div 
+                className="hidden lg:flex items-center w-64 px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-full hover:border-emerald-500 hover:ring-4 hover:ring-emerald-50/50 transition-all duration-300 group focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-50/50"
               >
-                <Icon name="MagnifyingGlassIcon" size={20} />
-              </button>
+                <Icon name="MagnifyingGlassIcon" size={18} className="text-gray-400 group-hover:text-emerald-600 transition-colors" />
+                <input 
+                  type="text"
+                  placeholder="Search..."
+                  className="ml-3 text-sm text-gray-600 font-medium bg-transparent border-none outline-none w-full placeholder:text-gray-400"
+                  onClick={(e) => e.stopPropagation()}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      setIsSearchOpen(true);
+                    }
+                  }}
+                />
+              </div>
 
               <Link
                 href="/platform-overview"
-                className="text-lg font-medium text-gray-800 hover:text-emerald-600 hover:scale-105 transition-all duration-200"
+                className="px-6 py-2.5 text-base font-bold text-white bg-emerald-600 hover:bg-emerald-700 hover:shadow-lg hover:-translate-y-0.5 rounded-full transition-all duration-200"
               >
                 Log in
               </Link>
