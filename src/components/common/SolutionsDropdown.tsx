@@ -24,12 +24,10 @@ const SolutionsDropdown = ({ onClose }: SolutionsDropdownProps) => {
   ];
 
   const compliance = [
-    { name: 'Energy Regulations', icon: 'BoltIcon' },
-    { name: 'Manufacturing Standards', icon: 'ShieldCheckIcon' },
-    { name: 'Healthcare Compliance', icon: 'DocumentCheckIcon' },
-    { name: 'Retail & E-commerce', icon: 'ScaleIcon' },
-    { name: 'Data Privacy (GDPR)', icon: 'LockClosedIcon' },
-    { name: 'Environmental Laws', icon: 'GlobeAltIcon' },
+    { name: 'Business Responsibility & Sustainability Reporting (BRSR)', icon: 'DocumentCheckIcon' },
+    { name: 'Greenhouse Gas Protocol (GHG)', icon: 'GlobeAltIcon' },
+    { name: 'Corporate Sustainability Reporting Directive (CSRD)', icon: 'ShieldCheckIcon' },
+    { name: 'Inline XBRL (iXBRL)', icon: 'CodeBracketIcon' },
   ];
 
 // ...
@@ -45,17 +43,17 @@ const SolutionsDropdown = ({ onClose }: SolutionsDropdownProps) => {
                 Compliance & Regulations
             </h3>
             <p className="text-gray-600 text-sm mb-6">
-                Stay compliant with global standards
+                Stay compliant with industries standards
             </p>
-            <div className="grid grid-cols-2 gap-y-3 gap-x-2">
+            <div className="grid grid-cols-1 gap-y-4">
                 {compliance.map((item) => (
                 <Link
                     key={item.name}
                     href="/standards-and-compliance"
                     onClick={onClose}
-                    className="flex items-center gap-2 text-gray-700 hover:text-primary transition-colors cursor-pointer group"
+                    className="flex items-center gap-3 text-gray-700 hover:text-primary transition-colors cursor-pointer group"
                 >
-                    <Icon name={item.icon} size={18} className="text-gray-500 group-hover:text-primary" />
+                    <Icon name={item.icon} size={20} className="text-gray-500 group-hover:text-primary shrink-0" />
                     <span className="text-sm font-medium">{item.name}</span>
                 </Link>
                 ))}
@@ -63,27 +61,7 @@ const SolutionsDropdown = ({ onClose }: SolutionsDropdownProps) => {
           </div>
 
           {/* Compliance Engine Section */}
-          <div className="bg-emerald-50/50 rounded-xl p-5 border border-emerald-100">
-              <h4 className="text-base font-bold text-gray-900 mb-3 flex items-center gap-2">
-                <Icon name="ShieldCheckIcon" className="text-emerald-600" size={20} />
-                Compliance Engine
-              </h4>
-              
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                    <Icon name="CheckCircleIcon" className="text-emerald-600 mt-0.5 shrink-0" size={16} />
-                    <span className="text-xs text-gray-700 leading-relaxed">
-                        Automated mapping to <strong>BRSR</strong>, <strong>GHG</strong>, <strong>CSRD</strong>, and <strong>iXBRL</strong>
-                    </span>
-                </li>
-                <li className="flex items-start gap-2">
-                    <Icon name="CheckCircleIcon" className="text-emerald-600 mt-0.5 shrink-0" size={16} />
-                    <span className="text-xs text-gray-700 leading-relaxed">
-                        Governance module with roles & alerts for audit readiness
-                    </span>
-                </li>
-              </ul>
-          </div>
+
         </div>
 
         {/* Column 2: Industries */}

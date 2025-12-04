@@ -12,6 +12,11 @@ const PricingSelector = () => {
   const [countrySearchQuery, setCountrySearchQuery] = useState('');
   const dropdownRef = useRef<HTMLDivElement>(null);
 
+  // New state for contact form
+  const [fullName, setFullName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+
   const sizes = [
     { id: 'XS', label: 'up to 25 employees' },
     { id: 'S', label: '26-99 employees' },
@@ -78,7 +83,7 @@ const PricingSelector = () => {
               : 'text-gray-500 hover:text-gray-700'
           }`}
         >
-          Rate My Suppliers
+          Product Pricing
           {activeTab === 'suppliers' && (
             <div className="absolute bottom-0 left-0 w-full h-1 bg-green-500 rounded-t-full" />
           )}
@@ -91,54 +96,49 @@ const PricingSelector = () => {
               : 'text-gray-500 hover:text-gray-700'
           }`}
         >
-          Rate My Company
+          Consulting Pricing
           {activeTab === 'company' && (
             <div className="absolute bottom-0 left-0 w-full h-1 bg-green-500 rounded-t-full" />
           )}
         </button>
       </div>
 
-      {/* Company Size */}
-      <div className="mb-12">
-        <h3 className="text-xl font-semibold text-gray-800 mb-8">Choose Your Company Size</h3>
-        <div className="flex flex-wrap gap-10">
-          {sizes.map((size) => (
-            <label 
-              key={size.id} 
-              className="flex items-center gap-3 cursor-pointer group"
-            >
-              <div className="relative">
-                <input
-                  type="radio"
-                  name="companySize"
-                  value={size.id}
-                  checked={companySize === size.id}
-                  onChange={() => setCompanySize(size.id as any)}
-                  className="sr-only"
-                />
-                <div 
-                  className={`w-7 h-7 rounded-full border-2 flex items-center justify-center transition-colors ${
-                    companySize === size.id 
-                      ? 'border-green-500 bg-green-500' 
-                      : 'border-gray-300 group-hover:border-gray-400'
-                  }`}
-                >
-                  {companySize === size.id && (
-                    <Icon name="CheckIcon" size={18} className="text-white" />
-                  )}
-                </div>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-bold text-gray-900 text-lg">{size.id}</span>
-                <span className="text-gray-500 text-base">- {size.label}</span>
-              </div>
-            </label>
-          ))}
+      {/* Contact Details */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="flex flex-col gap-2">
+            <label className="text-sm font-bold text-gray-500 uppercase tracking-wider">Full Name</label>
+            <input 
+                type="text" 
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+                className="bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent w-full font-medium"
+                placeholder="John Doe"
+            />
+        </div>
+        <div className="flex flex-col gap-2">
+            <label className="text-sm font-bold text-gray-500 uppercase tracking-wider">Phone Number</label>
+            <input 
+                type="tel" 
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent w-full font-medium"
+                placeholder="+1 (555) 000-0000"
+            />
+        </div>
+        <div className="flex flex-col gap-2">
+            <label className="text-sm font-bold text-gray-500 uppercase tracking-wider">Email</label>
+            <input 
+                type="email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent w-full font-medium"
+                placeholder="john@company.com"
+            />
         </div>
       </div>
 
-      {/* Filters Row */}
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-start lg:items-center">
+      {/* Filters Row (Country & Currency) */}
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-start lg:items-center mb-12">
         {/* Country Selector with Search */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-5 w-full lg:w-auto">
           <span className="text-sm font-bold text-gray-500 uppercase tracking-wider leading-tight whitespace-nowrap">
@@ -227,6 +227,55 @@ const PricingSelector = () => {
           </div>
         </div>
       </div>
+
+      {/* Company Size */}
+      <div className="mb-12">
+        <h3 className="text-xl font-semibold text-gray-800 mb-8">Choose Your Company Size</h3>
+        <div className="flex flex-wrap gap-10">
+          {sizes.map((size) => (
+            <label 
+              key={size.id} 
+              className="flex items-center gap-3 cursor-pointer group"
+            >
+              <div className="relative">
+                <input
+                  type="radio"
+                  name="companySize"
+                  value={size.id}
+                  checked={companySize === size.id}
+                  onChange={() => setCompanySize(size.id as any)}
+                  className="sr-only"
+                />
+                <div 
+                  className={`w-7 h-7 rounded-full border-2 flex items-center justify-center transition-colors ${
+                    companySize === size.id 
+                      ? 'border-green-500 bg-green-500' 
+                      : 'border-gray-300 group-hover:border-gray-400'
+                  }`}
+                >
+                  {companySize === size.id && (
+                    <Icon name="CheckIcon" size={18} className="text-white" />
+                  )}
+                </div>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span className="font-bold text-gray-900 text-lg">{size.id}</span>
+                <span className="text-gray-500 text-base">- {size.label}</span>
+              </div>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      {/* Submit Button */}
+      <div className="flex justify-start mt-8">
+        <button
+          className="bg-green-600 text-white text-lg font-bold py-4 px-12 rounded-full shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1"
+        >
+          Submit Request
+        </button>
+      </div>
+
     </div>
   );
 };
