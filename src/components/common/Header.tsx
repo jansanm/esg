@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
@@ -28,6 +28,8 @@ const Header = ({ className = '' }: HeaderProps) => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -48,13 +50,24 @@ const Header = ({ className = '' }: HeaderProps) => {
   };
 
   const handleMouseEnter = (label: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
     if (label === 'Platform' || label === 'Solutions' || label === 'Resources') {
       setActiveDropdown(label);
     }
   };
 
   const handleMouseLeave = () => {
-    setActiveDropdown(null);
+    timeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 100);
+  };
+
+  const handleDropdownEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
   };
 
   return (
@@ -86,21 +99,17 @@ const Header = ({ className = '' }: HeaderProps) => {
                     <div 
                       key={item.href} 
                       className="relative h-full flex items-center group"
+                      onMouseEnter={() => handleMouseEnter(item.label)}
+                      onMouseLeave={handleMouseLeave}
                     >
                       {item.hasDropdown ? (
                         <button
                           onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
-                          className={`text-base font-medium transition-all duration-200 flex items-center gap-1.5 hover:scale-105 relative ${
+                          className={`text-base font-medium transition-all duration-200 flex items-center gap-1.5 relative ${
                             isActiveItem ? 'text-emerald-700' : 'text-gray-700 hover:text-emerald-700'
                           }`}
                         >
                           {item.label}
-                          <Icon 
-                            name="PlayIcon" 
-                            variant="solid"
-                            size={10} 
-                            className={`transition-transform duration-200 ${activeDropdown === item.label ? '-rotate-90' : 'rotate-90'}`}
-                          />
                           {/* Animated underline - expands from center */}
                           <span className={`absolute -bottom-5 left-1/2 -translate-x-1/2 h-0.5 bg-emerald-600 transition-all duration-300 origin-center ${
                             isActiveItem ? 'w-full scale-x-100' : 'w-full scale-x-0 group-hover:scale-x-100'
@@ -179,17 +188,29 @@ const Header = ({ className = '' }: HeaderProps) => {
 
         {/* Mega Menu Dropdown */}
         {activeDropdown === 'Platform' && (
-          <div className="relative">
+          <div 
+            className="relative"
+            onMouseEnter={handleDropdownEnter}
+            onMouseLeave={handleMouseLeave}
+          >
              <PlatformDropdown onClose={() => setActiveDropdown(null)} />
           </div>
         )}
         {activeDropdown === 'Solutions' && (
-          <div className="relative">
+          <div 
+            className="relative"
+            onMouseEnter={handleDropdownEnter}
+            onMouseLeave={handleMouseLeave}
+          >
              <SolutionsDropdown onClose={() => setActiveDropdown(null)} />
           </div>
         )}
         {activeDropdown === 'Resources' && (
-          <div className="relative">
+          <div 
+            className="relative"
+            onMouseEnter={handleDropdownEnter}
+            onMouseLeave={handleMouseLeave}
+          >
              <ResourcesDropdown onClose={() => setActiveDropdown(null)} />
           </div>
         )}

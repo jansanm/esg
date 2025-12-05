@@ -6,7 +6,7 @@ import Icon from '@/components/ui/AppIcon';
 const PricingRequestSection = () => {
 
   const [companySize, setCompanySize] = useState<'100-500' | '501-1000' | '1000+' | null>(null);
-  const [country, setCountry] = useState('India');
+  const [country, setCountry] = useState('');
   const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
   const [countrySearchQuery, setCountrySearchQuery] = useState('');
   const [isCompanySizeDropdownOpen, setIsCompanySizeDropdownOpen] = useState(false);
@@ -74,18 +74,18 @@ const PricingRequestSection = () => {
   };
 
   return (
-    <section className="relative w-full bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900 overflow-hidden">
+    <section className="relative w-full bg-white overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
           
           {/* Left Column: Content */}
-          <div className="w-full lg:w-1/2 text-white text-center">
+          <div className="w-full lg:w-1/2 text-gray-900 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
               Flexible pricing for scalability and sustainability
             </h1>
@@ -119,7 +119,7 @@ const PricingRequestSection = () => {
                         type="text"
                         value={firstName}
                         onChange={(e) => setFirstName(e.target.value)}
-                        className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+                        className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-300 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
                         placeholder="John"
                       />
                     </div>
@@ -134,7 +134,7 @@ const PricingRequestSection = () => {
                         type="text"
                         value={lastName}
                         onChange={(e) => setLastName(e.target.value)}
-                        className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+                        className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-300 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
                         placeholder="Doe"
                       />
                     </div>
@@ -151,7 +151,7 @@ const PricingRequestSection = () => {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+                      className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-300 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
                       placeholder="john@company.com"
                     />
                   </div>
@@ -167,7 +167,7 @@ const PricingRequestSection = () => {
                       type="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+                      className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-300 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
                       placeholder="+1 (555) 000-0000"
                     />
                   </div>
@@ -178,7 +178,7 @@ const PricingRequestSection = () => {
                   <button
                     type="button"
                     onClick={() => setIsCountryDropdownOpen(!isCountryDropdownOpen)}
-                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-left text-gray-900 flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all relative"
+                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-300 rounded-md text-left text-gray-900 flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all relative"
                   >
                     <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
                       <Icon name="GlobeAltIcon" size={18} className="text-gray-400" />
@@ -226,7 +226,7 @@ const PricingRequestSection = () => {
                   <button
                     type="button"
                     onClick={() => setIsCompanySizeDropdownOpen(!isCompanySizeDropdownOpen)}
-                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-left text-gray-900 flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all relative"
+                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-300 rounded-md text-left text-gray-900 flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all relative"
                   >
                     <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
                       <Icon name="BuildingOfficeIcon" size={18} className="text-gray-400" />
@@ -262,7 +262,7 @@ const PricingRequestSection = () => {
                   type="submit"
                   className="w-full py-4 px-6 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold text-lg rounded-md shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 mt-4"
                 >
-                  Request Pricing
+                  Submit
                 </button>
               </form>
             </div>

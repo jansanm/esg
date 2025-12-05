@@ -24,10 +24,10 @@ module.exports = {
           200: '#dcf9e3',
           300: '#bbf2c8',
           400: '#8ce9a0',
-          500: '#5de075', // Lighter
-          600: '#4cd964', // Brand Color (Primary Action)
-          700: '#3dae50', // Darker (Hover)
-          800: '#328e42',
+          500: '#16a34a', // Lighter
+          600: '#15803d', // Brand Color (Primary Action) - Dark Green
+          700: '#166534', // Darker (Hover)
+          800: '#14532d',
           900: '#297436',
           950: '#153d1c',
         },

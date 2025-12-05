@@ -41,7 +41,7 @@ const cards: HeroCard[] = [
     subheadline: 'Real-time ESG dashboards  |  No spreadsheets. No drama.',
     ctaLabel: 'Request Demo',
     ctaHref: '/contact',
-    imageSrc: '/end-to-end-esg-new.png',
+    imageSrc: '/lyfcycle.png',
   },
 ];
 
@@ -78,11 +78,11 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="space-y-8 z-10 w-full text-left">
             <div className="transition-all duration-500 ease-in-out">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-gray-900 mb-6 min-h-[120px] lg:min-h-[180px] flex items-center">
                 {card.headline}
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed mb-8">
+              <p className="text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed mb-8 min-h-[60px] flex items-center">
                 {card.subheadline}
               </p>
 
@@ -94,8 +94,31 @@ const HeroSection = () => {
                   {card.ctaLabel}
                 </Link>
 
+
+              </div>
+            </div>
+          </div>
+
+          {/* Right Content - Image */}
+          <div className="flex flex-col items-center w-full justify-center">
+            <div className="relative w-full aspect-video flex justify-center items-center">
+              <div className="relative w-full h-full">
+                {/* Decorative background elements */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-emerald-50/50 rounded-full blur-3xl -z-10"></div>
+
+                <div className="relative w-full h-full transition-opacity duration-500 ease-in-out">
+                  <Image
+                    key={card.imageSrc} // Force re-render on image change for animation
+                    src={card.imageSrc}
+                    alt={card.headline}
+                    fill
+                    className="object-contain object-center animate-in fade-in zoom-in-95 duration-500 pb-12"
+                    priority
+                  />
+                </div>
+
                 {/* Carousel Controls */}
-                <div className="flex items-center gap-3">
+                <div className="absolute bottom-2 left-0 right-0 flex items-center justify-center gap-3 z-10">
                   {cards.map((_, index) => (
                     <button
                       key={index}
@@ -103,17 +126,17 @@ const HeroSection = () => {
                         setActiveCard(index);
                         setIsPlaying(false);
                       }}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 border border-emerald-600 ${
+                      className={`w-3 h-3 rounded-full transition-all duration-300 border border-gray-400 ${
                         index === activeCard
-                          ? 'bg-emerald-600 scale-125'
-                          : 'bg-transparent hover:bg-emerald-100'
+                          ? 'bg-gray-600 scale-125 border-gray-600'
+                          : 'bg-transparent hover:bg-gray-200' // Plain gray hover
                       }`}
                       aria-label={`Go to slide ${index + 1}`}
                     />
                   ))}
                   <button
                     onClick={togglePlay}
-                    className="ml-2 text-emerald-600 hover:text-emerald-800 transition-colors"
+                    className="ml-2 text-gray-400 hover:text-gray-700 transition-colors"
                   >
                     {isPlaying ? (
                       <Icon name="PauseIcon" size={20} />
@@ -122,25 +145,6 @@ const HeroSection = () => {
                     )}
                   </button>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Content - Image */}
-          <div className="relative w-full flex justify-center lg:justify-end h-[250px] sm:h-[350px] lg:h-[500px]">
-            <div className="relative w-full h-full">
-              {/* Decorative background elements */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-emerald-50/50 rounded-full blur-3xl -z-10"></div>
-
-              <div className="relative w-full h-full transition-opacity duration-500 ease-in-out">
-                <Image
-                  key={card.imageSrc} // Force re-render on image change for animation
-                  src={card.imageSrc}
-                  alt={card.headline}
-                  fill
-                  className="object-contain animate-in fade-in zoom-in-95 duration-500"
-                  priority
-                />
               </div>
             </div>
           </div>
