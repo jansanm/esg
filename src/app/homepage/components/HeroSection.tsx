@@ -72,9 +72,9 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative bg-white pt-0 pb-0 lg:pt-0 lg:pb-0 overflow-hidden">
+    <section className="relative bg-white pt-3 pb-0 lg:pt-0 lg:pb-0 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center min-h-[500px]">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[500px]">
           {/* Left Content */}
           <div className="space-y-8 z-10 w-full text-left">
             <div className="transition-all duration-500 ease-in-out">
@@ -127,7 +127,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Image */}
-          <div className="relative w-full flex justify-center lg:justify-end h-[400px] lg:h-[500px]">
+          <div className="relative w-full flex justify-center lg:justify-end h-[250px] sm:h-[350px] lg:h-[500px]">
             <div className="relative w-full h-full">
               {/* Decorative background elements */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-emerald-50/50 rounded-full blur-3xl -z-10"></div>
