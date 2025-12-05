@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import Header from '@/components/common/Header';
-import PricingInteractive from './components/PricingInteractive';
-import PricingHero from './components/PricingHero';
-import PricingSelector from './components/PricingSelector';
+
+import PricingRequestSection from './components/PricingRequestSection';
 import Icon from '@/components/ui/AppIcon';
 import Footer from '@/components/common/Footer';
 
@@ -40,8 +39,7 @@ export default function PricingAndROICalculatorPage() {
       <Header />
 
       <main className="w-full">
-        <PricingHero />
-        <PricingSelector />
+        <PricingRequestSection />
 
         <section className="py-16 bg-card border-y border-border mt-12">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -66,11 +64,7 @@ export default function PricingAndROICalculatorPage() {
           </div>
         </section>
 
-        <section id="pricing" className="py-16 md:py-24">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <PricingInteractive />
-          </div>
-        </section>
+
 
         <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">

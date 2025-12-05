@@ -61,7 +61,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   const menuItems = [
     { label: 'Platform', items: platformItems },
     { label: 'Solutions', items: solutionItems },
-    { label: 'Pricing', href: '/pricing-and-roi-calculator' },
+    { label: 'Request Quote', href: '/pricing-and-roi-calculator' },
     { label: 'Resources', items: resourceItems },
   ];
 

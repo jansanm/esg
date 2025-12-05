@@ -148,9 +148,9 @@ const Header = ({ className = '' }: HeaderProps) => {
 
               <Link
                 href="/platform-overview"
-                className="px-6 py-2.5 text-base font-bold text-white bg-emerald-600 hover:bg-emerald-700 hover:shadow-lg hover:-translate-y-0.5 rounded-full transition-all duration-200"
+                className="px-6 py-2.5 text-base font-bold text-gray-900 bg-gray-100 hover:bg-gray-200 hover:shadow-lg hover:-translate-y-0.5 rounded-full transition-all duration-200"
               >
-                Log in
+                Sign in
               </Link>
 
               {/* <Link

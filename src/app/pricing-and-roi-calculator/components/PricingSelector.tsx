@@ -6,7 +6,7 @@ import Icon from '@/components/ui/AppIcon';
 const PricingSelector = () => {
   const [activeTab, setActiveTab] = useState<'suppliers' | 'company'>('company');
   const [companySize, setCompanySize] = useState<'XS' | 'S' | 'M' | 'L'>('M');
-  const [currency, setCurrency] = useState<'USD' | 'EUR'>('USD');
+
   const [country, setCountry] = useState('India');
   const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
   const [countrySearchQuery, setCountrySearchQuery] = useState('');
@@ -198,34 +198,7 @@ const PricingSelector = () => {
           </div>
         </div>
 
-        {/* Currency Selector */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-5 w-full lg:w-auto">
-          <span className="text-sm font-bold text-gray-500 uppercase tracking-wider leading-tight whitespace-nowrap">
-            SELECT <br className="hidden sm:block"/> CURRENCY
-          </span>
-          <div className="flex border border-gray-200 rounded-md overflow-hidden w-full sm:w-auto">
-            <button
-              onClick={() => setCurrency('USD')}
-              className={`flex-1 sm:flex-none px-5 py-3 text-base font-medium transition-colors ${
-                currency === 'USD' 
-                  ? 'bg-gray-200 text-gray-900' 
-                  : 'bg-white text-gray-500 hover:bg-gray-50'
-              }`}
-            >
-              $ USD
-            </button>
-            <button
-              onClick={() => setCurrency('EUR')}
-              className={`flex-1 sm:flex-none px-5 py-3 text-base font-medium transition-colors ${
-                currency === 'EUR' 
-                  ? 'bg-gray-200 text-gray-900' 
-                  : 'bg-white text-gray-500 hover:bg-gray-50'
-              }`}
-            >
-              € EUR
-            </button>
-          </div>
-        </div>
+
       </div>
 
       {/* Company Size */}

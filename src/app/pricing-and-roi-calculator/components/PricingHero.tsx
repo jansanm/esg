@@ -20,7 +20,7 @@ const PricingHero = () => {
         {/* Content */}
         <div className="relative h-full flex items-center justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white tracking-wide drop-shadow-lg">
-            Plans and Pricing
+            Flexiblae pricing for scaliablilty and sustainability
           </h1>
         </div>
       </div>

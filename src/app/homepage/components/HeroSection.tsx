@@ -41,7 +41,7 @@ const cards: HeroCard[] = [
     subheadline: 'Real-time ESG dashboards  |  No spreadsheets. No drama.',
     ctaLabel: 'Request Demo',
     ctaHref: '/contact',
-    imageSrc: '/end-to-end-esg.png',
+    imageSrc: '/end-to-end-esg-new.png',
   },
 ];
 
