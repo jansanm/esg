@@ -17,7 +17,7 @@ interface HeroCard {
 
 const cards: HeroCard[] = [
   {
-    id: 1,
+    id: 2,
     slug: 'intelligence',
     headline: 'Real-Time ESG Intelligence for Enterprise.',
     subheadline: 'Real-time ESG dashboards  |  No spreadsheets. No drama.',
@@ -26,22 +26,22 @@ const cards: HeroCard[] = [
     imageSrc: '/esg-updated.png',
   },
   {
-    id: 2,
-    slug: 'netzero',
-    headline: 'SDG Goals & Net-Zero Tracking.',
-    subheadline: 'Automated data collection  |  Audit-ready reports.',
-    ctaLabel: 'Request Demo',
-    ctaHref: '/standards-and-compliance',
-    imageSrc: '/ask.png',
-  },
-  {
     id: 3,
     slug: 'end-to-end',
     headline: 'End-to-End ESG Management in One Place.',
     subheadline: 'Real-time ESG dashboards  |  No spreadsheets. No drama.',
     ctaLabel: 'Request Demo',
     ctaHref: '/contact',
-    imageSrc: '/lyfcycle.png',
+    imageSrc: '/real-esg.png',
+  },
+  {
+    id: 1,
+    slug: 'netzero',
+    headline: 'SDG Goals & Net-Zero Tracking.',
+    subheadline: 'Automated data collection  |  Audit-ready reports.',
+    ctaLabel: 'Request Demo',
+    ctaHref: '/standards-and-compliance',
+    imageSrc: '/ask.png',
   },
 ];
 
@@ -74,7 +74,7 @@ const HeroSection = () => {
   return (
     <section className="relative bg-white pt-3 pb-0 lg:pt-0 lg:pb-0 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[500px]">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-5rem)]">
           {/* Left Content */}
           <div className="space-y-8 z-10 w-full text-left">
             <div className="transition-all duration-500 ease-in-out">
@@ -101,7 +101,7 @@ const HeroSection = () => {
 
           {/* Right Content - Image */}
           <div className="flex flex-col items-center w-full justify-center">
-            <div className="relative w-full aspect-video flex justify-center items-center">
+            <div className="relative w-full h-[50vh] lg:h-[60vh] flex justify-center items-center">
               <div className="relative w-full h-full">
                 {/* Decorative background elements */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-emerald-50/50 rounded-full blur-3xl -z-10"></div>
@@ -112,13 +112,13 @@ const HeroSection = () => {
                     src={card.imageSrc}
                     alt={card.headline}
                     fill
-                    className="object-contain object-center animate-in fade-in zoom-in-95 duration-500 pb-12"
+                    className="object-contain object-center animate-in fade-in zoom-in-95 duration-500"
                     priority
                   />
                 </div>
 
                 {/* Carousel Controls */}
-                <div className="absolute bottom-2 left-0 right-0 flex items-center justify-center gap-3 z-10">
+                <div className="absolute bottom-4 left-0 right-0 flex items-center justify-center gap-3 z-10">
                   {cards.map((_, index) => (
                     <button
                       key={index}

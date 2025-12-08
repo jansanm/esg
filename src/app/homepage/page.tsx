@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import Header from '@/components/common/Header';
 import HeroSection from './components/HeroSection';
+import VideoSection from './components/VideoSection';
 import AlignmentStrip from './components/AlignmentStrip';
-import LiveDashboard3D from './components/LiveDashboard3D';
 import TrustStrip from './components/TrustStrip';
 import RoleBasedNavigation from './components/RoleBasedNav';
 import SocialProofCarousel from './components/SocialProofCarousel';
@@ -21,12 +21,14 @@ export default function Homepage() {
       <Header />
       <main>
         <HeroSection />
+        <VideoSection />
+        <FeaturesOverview />
         <AlignmentStrip />
-        <LiveDashboard3D />
+
         <TrustStrip />
         <RoleBasedNavigation />
         <SocialProofCarousel />
-        <FeaturesOverview />
+        
         <CTASection />
       </main>
       <Footer />
