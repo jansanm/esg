@@ -32,7 +32,7 @@ const cards: HeroCard[] = [
     subheadline: 'Real-time ESG dashboards  |  No spreadsheets. No drama.',
     ctaLabel: 'Request Demo',
     ctaHref: '/contact',
-    imageSrc: '/real-esg.png',
+    imageSrc: '/esg-licecycyle.png',
   },
   {
     id: 1,
