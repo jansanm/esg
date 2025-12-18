@@ -9,34 +9,34 @@ const CTASection = () => {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full mb-6">
+          {/* <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full mb-6">
             <Icon name="RocketLaunchIcon" size={20} className="text-white" />
             <span className="text-sm font-body-medium text-white">Start Your Verification Journey</span>
-          </div>
+          </div> */}
 
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-headline font-headline-bold text-white mb-6 leading-tight">
-            Ready to Transform Your ESG Verification?
+            Ready to Transform Your ESG Monitoring, Reporting, and Verification?
           </h2>
 
-          <p className="text-lg lg:text-xl text-white/90 font-body mb-10 leading-relaxed">
+          {/* <p className="text-lg lg:text-xl text-white/90 font-body mb-10 leading-relaxed">
             Join 500+ enterprises using EcoVeraZ to deliver audit-grade environmental verification. See live proof in minutes, not months.
-          </p>
+          </p> */}
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="/pricing-and-roi-calculator"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-cta-bold text-primary bg-white hover:bg-gray-50 hover:-translate-y-0.5 hover:shadow-hover rounded-lg transition-smooth"
             >
-              Request Live Demo
+              Request Demo
               <Icon name="PlayIcon" size={20} className="ml-2 text-current" variant="solid" />
             </Link>
-            <Link
+            {/* <Link
               href="/platform-overview"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-cta text-white bg-white/10 hover:bg-white/20 border border-white/30 rounded-lg transition-smooth"
             >
               See Platform in Action
               <Icon name="ArrowRightIcon" size={20} className="ml-2 text-current" />
-            </Link>
+            </Link> */}
           </div>
 
           <div className="mt-12 pt-12 border-t border-white/20">

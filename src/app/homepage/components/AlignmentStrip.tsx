@@ -10,6 +10,14 @@ const AlignmentStrip = () => {
     { name: 'International Organization for Standardization', code: 'ISO', description: 'World-class standards for quality and safety.' },
     { name: 'Global Standards 1', code: 'GS1', description: 'Global language of business for supply chain.' },
     { name: 'World Business Council for Sustainable Development', code: 'WBCSD', description: 'CEO-led community of sustainable businesses.' },
+    { name: 'EU Corporate Sustainability Reporting', code: 'CSRD', description: 'Comprehensive ESG disclosure requirements for EU companies.' },
+    { name: 'Sustainable Finance Disclosure', code: 'SFDR', description: 'EU regulation on sustainability-related disclosures.' },
+    { name: 'Climate Disclosure Rules', code: 'SEC', description: 'US Securities and Exchange Commission climate rules.' },
+    { name: 'Global Reporting Initiative', code: 'GRI', description: 'World\'s most widely used sustainability reporting standards.' },
+    { name: 'Sustainability Accounting Board', code: 'SASB', description: 'Industry-specific sustainability accounting standards.' },
+    { name: 'Climate-related Financial Disclosure', code: 'TCFD', description: 'Framework for climate-related financial risk disclosure.' },
+    { name: 'Business Responsibility Reporting', code: 'BRSR', description: 'Indian ESG reporting framework for listed companies.' },
+    { name: 'Carbon Accounting Standard', code: 'ISO 14064', description: 'International standard for greenhouse gas accounting.' },
   ];
 
   return (
@@ -28,7 +36,7 @@ const AlignmentStrip = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {standards.map((standard, index) => (
             <div
               key={standard.code}
@@ -63,7 +71,7 @@ const AlignmentStrip = () => {
         <div className="text-center mt-12">
           <p className="text-gray-500 text-sm font-medium flex items-center justify-center gap-2">
             <Icon name="ShieldCheckIcon" size={16} className="text-emerald-500" />
-            Built to work with leading global sustainability standards and disclosure frameworks.
+            Seamlessly integrate with all major sustainability standards and regulatory requirements
           </p>
         </div>
 

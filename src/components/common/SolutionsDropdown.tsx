@@ -24,10 +24,19 @@ const SolutionsDropdown = ({ onClose }: SolutionsDropdownProps) => {
   ];
 
   const compliance = [
-    { name: 'Business Responsibility & Sustainability Reporting (BRSR)', icon: 'DocumentCheckIcon' },
-    { name: 'Greenhouse Gas Protocol (GHG)', icon: 'GlobeAltIcon' },
-    { name: 'Corporate Sustainability Reporting Directive (CSRD)', icon: 'ShieldCheckIcon' },
-    { name: 'Inline XBRL (iXBRL)', icon: 'CodeBracketIcon' },
+    { name: 'UN Global Compact (UNGC)', icon: 'GlobeAltIcon' },
+    { name: 'Carbon Disclosure Project (CDP)', icon: 'DocumentChartBarIcon' },
+    { name: 'International Organization for Standardization (ISO)', icon: 'ShieldCheckIcon' },
+    { name: 'Global Standards 1 (GS1)', icon: 'QrCodeIcon' },
+    { name: 'World Business Council for Sustainable Development (WBCSD)', icon: 'BuildingOffice2Icon' },
+    { name: 'EU Corporate Sustainability Reporting (CSRD)', icon: 'DocumentCheckIcon' },
+    { name: 'Sustainable Finance Disclosure (SFDR)', icon: 'BanknotesIcon' },
+    { name: 'Climate Disclosure Rules (SEC)', icon: 'ScaleIcon' },
+    { name: 'Global Reporting Initiative (GRI)', icon: 'DocumentTextIcon' },
+    { name: 'Sustainability Accounting Board (SASB)', icon: 'CalculatorIcon' },
+    { name: 'Climate-related Financial Disclosure (TCFD)', icon: 'ChartBarIcon' },
+    { name: 'Business Responsibility Reporting (BRSR)', icon: 'ClipboardDocumentCheckIcon' },
+    { name: 'Carbon Accounting Standard (ISO 14064)', icon: 'CloudIcon' },
   ];
 
 // ...

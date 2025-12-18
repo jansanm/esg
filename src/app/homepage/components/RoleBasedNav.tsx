@@ -24,6 +24,15 @@ const RoleBasedNavigation = () => {
 
   const roles: Role[] = [
     {
+      id: 0,
+      title: 'CEA Suite Audience',
+      description: 'Strategic oversight for global compliance and operational excellence',
+      icon: 'BriefcaseIcon',
+      color: 'from-purple-600 to-indigo-700',
+      link: '/solutions-hub',
+      benefits: ['Global compliance assurance', 'Business continuity & resilience', 'Operational efficiency'],
+    },
+    {
       id: 1,
       title: 'Sustainability Officers',
       description: 'Audit-grade verification to replace manual ESG processes',
@@ -58,6 +67,15 @@ const RoleBasedNavigation = () => {
       color: 'from-success to-green-700',
       link: '/solutions-hub',
       benefits: ['Compliance verification', 'Public accountability', 'Framework alignment'],
+    },
+    {
+      id: 5,
+      title: 'Customers & Partners',
+      description: 'Build trust through verified sustainability commitments',
+      icon: 'UserGroupIcon',
+      color: 'from-pink-600 to-rose-600',
+      link: '/solutions-hub',
+      benefits: ['Transparent ESG credentials', 'Collaborative sustainability goals', 'Verified impact reporting'],
     },
   ];
 

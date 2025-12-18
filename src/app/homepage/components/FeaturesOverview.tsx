@@ -90,12 +90,12 @@ const FeaturesOverview = () => {
                 {feature.description}
               </p>
 
-              <div className="mt-auto flex items-center text-sm font-semibold text-emerald-600 group-hover:text-white transition-colors duration-300">
+              {/* <div className="mt-auto flex items-center text-sm font-semibold text-emerald-600 group-hover:text-white transition-colors duration-300">
                 Learn More
                 <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
                    <Icon name="ArrowRightIcon" size={16} />
                 </span>
-              </div>
+              </div> */}
             </Link>
           ))}
         </div>

@@ -68,16 +68,16 @@ const SocialProofCarousel = () => {
     <section className="bg-muted py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
+          {/* <div className="inline-flex items-center space-x-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
             <Icon name="BuildingOfficeIcon" size={20} className="text-primary" />
             <span className="text-sm font-body-medium text-primary">Trusted by Industry Leaders</span>
-          </div>
+          </div> */}
           <h2 className="text-2xl lg:text-3xl font-headline font-headline-bold text-foreground mb-3">
             Powering ESG Verification Globally
           </h2>
-          <p className="text-base text-text-secondary font-body max-w-2xl mx-auto">
+          {/* <p className="text-base text-text-secondary font-body max-w-2xl mx-auto">
             From mining operations to pharmaceutical manufacturing, enterprises trust EcoVeraZ for audit-grade environmental verification.
-          </p>
+          </p> */}
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -98,7 +98,7 @@ const SocialProofCarousel = () => {
           )}
         </div>
 
-        <div className="mt-12 grid md:grid-cols-3 gap-8">
+        {/* <div className="mt-12 grid md:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="text-4xl font-headline font-headline-bold text-primary mb-2">500+</div>
             <p className="text-sm text-text-secondary font-body">Enterprise Deployments</p>
@@ -111,7 +111,7 @@ const SocialProofCarousel = () => {
             <div className="text-4xl font-headline font-headline-bold text-success mb-2">99.9%</div>
             <p className="text-sm text-text-secondary font-body">Audit Success Rate</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>);
 

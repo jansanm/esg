@@ -6,7 +6,7 @@ import Icon from '@/components/ui/AppIcon';
 const TrustStrip = () => {
   return (
     <section className="bg-card py-12">
-      <div className="text-center mb-12">
+      {/* <div className="text-center mb-12">
         <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground mb-4">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-brand-secondary to-primary bg-300% animate-gradient">
             End-to-End Verification Workflow
@@ -15,10 +15,10 @@ const TrustStrip = () => {
         <p className="text-text-secondary text-lg max-w-2xl mx-auto">
           Seamlessly orchestrating ESG data from source to immutable proof.
         </p>
-      </div>
+      </div> */}
 
       {/* Full Screen Workflow Image */}
-      <div className="w-full max-w-5xl mx-auto mb-12">
+      {/* <div className="w-full max-w-5xl mx-auto mb-12">
         <Image
           src="/esg-workfloww.png"
           alt="ESG Workflow Process"
@@ -27,9 +27,9 @@ const TrustStrip = () => {
           className="w-full h-auto"
           priority
         />
-      </div>
+      </div> */}
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      {/* <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 px-4 py-2 bg-primary/5 border border-primary/20 rounded-full mb-4">
             <Icon name="ShieldCheckIcon" size={20} className="text-primary" variant="outline" />
@@ -44,7 +44,6 @@ const TrustStrip = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Card 1 */}
           <div className="group relative p-8 bg-card border border-border rounded-2xl transition-all duration-300 hover:bg-success hover:border-success hover:shadow-xl flex flex-col h-full">
             <div className="w-14 h-14 rounded-xl bg-success/10 flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
               <Icon name="ClipboardDocumentCheckIcon" size={28} className="text-success group-hover:text-white transition-colors" variant="outline" />
@@ -58,7 +57,6 @@ const TrustStrip = () => {
             </div>
           </div>
 
-          {/* Card 2 */}
           <div className="group relative p-8 bg-card border border-border rounded-2xl transition-all duration-300 hover:bg-success hover:border-success hover:shadow-xl flex flex-col h-full">
             <div className="w-14 h-14 rounded-xl bg-success/10 flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
               <Icon name="LockClosedIcon" size={28} className="text-success group-hover:text-white transition-colors" variant="outline" />
@@ -72,7 +70,6 @@ const TrustStrip = () => {
             </div>
           </div>
 
-          {/* Card 3 */}
           <div className="group relative p-8 bg-card border border-border rounded-2xl transition-all duration-300 hover:bg-success hover:border-success hover:shadow-xl flex flex-col h-full">
             <div className="w-14 h-14 rounded-xl bg-success/10 flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
               <Icon name="SparklesIcon" size={28} className="text-success group-hover:text-white transition-colors" variant="outline" />
@@ -86,7 +83,6 @@ const TrustStrip = () => {
             </div>
           </div>
 
-          {/* Card 4 */}
           <div className="group relative p-8 bg-card border border-border rounded-2xl transition-all duration-300 hover:bg-success hover:border-success hover:shadow-xl flex flex-col h-full">
             <div className="w-14 h-14 rounded-xl bg-success/10 flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
               <Icon name="CheckBadgeIcon" size={28} className="text-success group-hover:text-white transition-colors" variant="outline" />
@@ -99,10 +95,10 @@ const TrustStrip = () => {
               <Icon name="ArrowRightIcon" size={24} className="text-muted-foreground group-hover:text-white transition-colors" variant="outline" />
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Core Principles Section */}
-        <div className="mt-24 text-center">
+        {/* <div className="mt-24 text-center">
           <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground mb-4">
             Core Principles
           </h2>
@@ -111,7 +107,6 @@ const TrustStrip = () => {
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Integrity Card */}
             <div className="group p-8 bg-card border border-border hover:border-success/50 rounded-3xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <div className="w-16 h-16 mx-auto rounded-2xl bg-success/10 flex items-center justify-center mb-6 group-hover:bg-success/20 transition-colors">
                 <Icon name="LockClosedIcon" size={32} className="text-success" variant="outline" />
@@ -122,7 +117,6 @@ const TrustStrip = () => {
               </p>
             </div>
 
-            {/* Governance Card */}
             <div className="group p-8 bg-card border border-border hover:border-success/50 rounded-3xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <div className="w-16 h-16 mx-auto rounded-2xl bg-success/10 flex items-center justify-center mb-6 group-hover:bg-success/20 transition-colors">
                 <Icon name="ScaleIcon" size={32} className="text-success" variant="outline" />
@@ -133,7 +127,6 @@ const TrustStrip = () => {
               </p>
             </div>
 
-            {/* Trust Card */}
             <div className="group p-8 bg-card border border-border hover:border-success/50 rounded-3xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <div className="w-16 h-16 mx-auto rounded-2xl bg-success/10 flex items-center justify-center mb-6 group-hover:bg-success/20 transition-colors">
                 <Icon name="ShieldCheckIcon" size={32} className="text-success" variant="outline" />
@@ -144,53 +137,9 @@ const TrustStrip = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        {/* Globally Recognized Frameworks Section */}
-        <div className="mt-24">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground mb-4">
-              Globally Recognized Frameworks
-            </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-8">
-              Seamlessly integrate with all major sustainability standards and regulatory requirements
-            </p>
-            
-            <div className="inline-block max-w-3xl mx-auto p-6 bg-success/5 rounded-2xl border border-success/10 backdrop-blur-sm">
-              <h3 className="text-lg font-headline font-bold text-success mb-2">Built for Global Sustainability Standards</h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                EcoVeraZ ensures compliance with major frameworks. Our platform simplifies complex regulatory requirements into actionable insights.
-              </p>
-            </div>
-          </div>
-
-          <div className="rounded-2xl border border-border overflow-hidden bg-border">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px">
-              {[
-                { id: 'CSRD', name: 'EU Corporate Sustainability Reporting' },
-                { id: 'SFDR', name: 'Sustainable Finance Disclosure' },
-                { id: 'SEC', name: 'Climate Disclosure Rules' },
-                { id: 'GRI', name: 'Global Reporting Initiative' },
-                { id: 'SASB', name: 'Sustainability Accounting Board' },
-                { id: 'TCFD', name: 'Climate-related Financial Disclosure' },
-                { id: 'BRSR', name: 'Business Responsibility Reporting' },
-                { id: 'ISO 14064', name: 'Carbon Accounting Standard' },
-              ].map((framework) => (
-                <div 
-                  key={framework.id} 
-                  className="bg-card p-8 flex flex-col items-center text-center hover:bg-success/5 transition-all duration-300 group cursor-default"
-                >
-                  <span className="text-3xl font-headline font-bold text-foreground mb-3 group-hover:text-success group-hover:scale-110 transition-all duration-300">
-                    {framework.id}
-                  </span>
-                  <span className="text-sm font-medium text-text-secondary group-hover:text-foreground transition-colors duration-300">
-                    {framework.name}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Why Choose EcoVeraZ Section */}
         <div className="mt-24">

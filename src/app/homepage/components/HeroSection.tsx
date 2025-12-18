@@ -20,7 +20,7 @@ const cards: HeroCard[] = [
     id: 2,
     slug: 'intelligence',
     headline: 'Real-Time ESG Intelligence for Enterprise.',
-    subheadline: 'Real-time ESG dashboards  |  No spreadsheets. No drama.',
+    subheadline: 'Compliance & AI-Driven Analytics.',
     ctaLabel: 'Request Demo',
     ctaHref: '/platform-overview',
     imageSrc: '/esg-updated.png',
@@ -32,13 +32,13 @@ const cards: HeroCard[] = [
     subheadline: 'Real-time ESG dashboards  |  No spreadsheets. No drama.',
     ctaLabel: 'Request Demo',
     ctaHref: '/contact',
-    imageSrc: '/esg-licecycyle.png',
+    imageSrc: '/workflow.png',
   },
   {
     id: 1,
     slug: 'netzero',
     headline: 'SDG Goals & Net-Zero Tracking.',
-    subheadline: 'Automated data collection  |  Audit-ready reports.',
+    subheadline: 'SDG Goals & Net-Zero Tracking Simplified.',
     ctaLabel: 'Request Demo',
     ctaHref: '/standards-and-compliance',
     imageSrc: '/ask.png',
@@ -55,7 +55,7 @@ const HeroSection = () => {
     let interval: NodeJS.Timeout;
 
     if (isPlaying) {
-      const duration = 5000;
+      const duration = 10000;
 
       interval = setInterval(() => {
         setActiveCard((prev) => (prev + 1) % cards.length);
@@ -118,7 +118,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* Carousel Controls */}
-                <div className="absolute bottom-4 left-0 right-0 flex items-center justify-center gap-3 z-10">
+                <div className="absolute -bottom-10 left-0 right-0 flex items-center justify-center gap-3 z-10">
                   {cards.map((_, index) => (
                     <button
                       key={index}
