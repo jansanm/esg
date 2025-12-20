@@ -127,21 +127,47 @@ export default function PricingAndROICalculatorPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-br from-brand-dark via-foreground to-brand-dark text-white">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-headline font-headline-bold mb-4">
-              Ready to Transform Your ESG Verification?
-            </h2>
-            <p className="text-lg font-body opacity-90 max-w-3xl mx-auto mb-8">
-              Join leading enterprises using EcoVeraZ to deliver audit-grade verification with measurable ROI. Start with a risk-free pilot program today.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-cta-bold text-sm hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-hover transition-smooth">
-                Request Demo
-              </button>
-              <button className="px-8 py-3 bg-white/10 text-white border border-white/20 rounded-lg font-cta-bold text-sm hover:bg-white/20 transition-smooth">
-                Download Pricing Guide
-              </button>
+        <section className="relative bg-gradient-to-br from-primary via-green-700 to-primary overflow-hidden py-20">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(255,255,255,0.05),transparent_50%)]" />
+
+          <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl lg:text-4xl xl:text-5xl font-headline font-headline-bold text-white mb-6 leading-tight">
+                Ready to transform your ESG Monitoring, Reporting and Verification?
+              </h2>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-transparent text-white font-bold text-lg hover:bg-white/10 transition-all duration-200 border-2 border-white">
+                  Request Demo
+                </button>
+              </div>
+
+              <div className="mt-12 pt-12 border-t border-white/20">
+                <div className="grid sm:grid-cols-3 gap-8">
+                  <div className="text-center">
+                    <div className="flex items-center justify-center space-x-2 mb-2">
+                      <Icon name="ClockIcon" size={24} className="text-white" />
+                      <span className="text-2xl font-headline font-headline-bold text-white">5 min</span>
+                    </div>
+                    <p className="text-sm text-white/80 font-body">Setup Time</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="flex items-center justify-center space-x-2 mb-2">
+                      <Icon name="ShieldCheckIcon" size={24} className="text-white" variant="solid" />
+                      <span className="text-2xl font-headline font-headline-bold text-white">Zero</span>
+                    </div>
+                    <p className="text-sm text-white/80 font-body">Integration Risk</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="flex items-center justify-center space-x-2 mb-2">
+                      <Icon name="CurrencyDollarIcon" size={24} className="text-white" />
+                      <span className="text-2xl font-headline font-headline-bold text-white">80%</span>
+                    </div>
+                    <p className="text-sm text-white/80 font-body">Cost Reduction</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

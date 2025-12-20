@@ -15,7 +15,7 @@ const CTASection = () => {
           </div> */}
 
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-headline font-headline-bold text-white mb-6 leading-tight">
-            Ready to Transform Your ESG Monitoring, Reporting, and Verification?
+            Ready to transform your ESG Monitoring, Reporting and Verification?
           </h2>
 
           {/* <p className="text-lg lg:text-xl text-white/90 font-body mb-10 leading-relaxed">
@@ -25,10 +25,9 @@ const CTASection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="/pricing-and-roi-calculator"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-cta-bold text-primary bg-white hover:bg-gray-50 hover:-translate-y-0.5 hover:shadow-hover rounded-lg transition-smooth"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-emerald-600 text-white font-bold text-lg shadow-lg hover:bg-emerald-700 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 border-2 border-white"
             >
               Request Demo
-              <Icon name="PlayIcon" size={20} className="ml-2 text-current" variant="solid" />
             </Link>
             {/* <Link
               href="/platform-overview"

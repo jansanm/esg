@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/common/Header';
 import PlatformHero from './components/PlatformHero';
 import PlatformStats from './components/PlatformStats';
-
+import SocialProofCarousel from '@/app/homepage/components/SocialProofCarousel';
 import TechnicalArchitecture from './components/TechnicalArchitecture';
 
 
@@ -21,6 +21,7 @@ export default function PlatformOverviewPage() {
       <Header />
       <PlatformHero />
       <PlatformStats />
+      <SocialProofCarousel />
       {/* PlatformTabs removed */}
       <TechnicalArchitecture />
       {/* InteractiveDemo removed */}

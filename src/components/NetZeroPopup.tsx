@@ -62,7 +62,7 @@ const NetZeroPopup = () => {
           {/* Question */}
           <div className="mb-4">
             <h3 className="text-lg font-bold text-gray-900 mb-2">
-              When do you plan to achieve your Net-Zero target?
+              By when do you plan to achieve your Net-Zero target?
             </h3>
             {/* <p className="text-sm text-gray-600">
               Help us understand your sustainability goals
@@ -96,7 +96,7 @@ const NetZeroPopup = () => {
             <div className="mt-4 p-3 bg-emerald-50 rounded-lg animate-in fade-in duration-300">
               <p className="text-sm text-emerald-700 font-medium flex items-center gap-2">
                 <Icon name="CheckCircleIcon" size={18} />
-                Thank you for sharing!
+                Thank you!
               </p>
             </div>
           )}

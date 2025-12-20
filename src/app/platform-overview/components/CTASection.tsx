@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 
 interface CTASectionProps {
@@ -6,44 +7,48 @@ interface CTASectionProps {
 
 const CTASection = ({ className = '' }: CTASectionProps) => {
   return (
-    <section className={`bg-gradient-to-br from-primary via-primary/90 to-secondary relative overflow-hidden ${className}`}>
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-      </div>
+    <section className={`relative bg-gradient-to-br from-primary via-green-700 to-primary overflow-hidden py-20 ${className}`}>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(255,255,255,0.05),transparent_50%)]" />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
-        <div className="text-center max-w-3xl mx-auto space-y-6">
-          <h2 className="text-3xl lg:text-4xl font-headline font-headline-bold text-white">
-            Ready to Transform Your ESG Verification?
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-headline font-headline-bold text-white mb-6 leading-tight">
+            Ready to transform your ESG Monitoring, Reporting and Verification?
           </h2>
-          <p className="text-lg text-white/90 font-body">
-            Join leading enterprises using EcoVeraZ to replace sustainability claims with verifiable proof. Request a personalized demo and see the platform in action with your data.
-          </p>
 
-          <div className="flex flex-wrap justify-center gap-4 pt-4">
-            <button className="px-8 py-4 bg-white text-primary font-cta-bold rounded-lg hover:bg-white/90 hover:-translate-y-0.5 hover:shadow-hover transition-smooth inline-flex items-center space-x-2">
-              <span>Request Interactive Demo</span>
-              <Icon name="PlayIcon" size={20} className="text-current" variant="solid" />
-            </button>
-            <button className="px-8 py-4 bg-transparent border-2 border-white text-white font-cta-bold rounded-lg hover:bg-white/10 transition-smooth inline-flex items-center space-x-2">
-              <span>Talk to Solutions Team</span>
-              <Icon name="ChatBubbleLeftRightIcon" size={20} className="text-current" />
-            </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              href="/pricing-and-roi-calculator"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-emerald-600 text-white font-bold text-lg shadow-lg hover:bg-emerald-700 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 border-2 border-white"
+            >
+              Request Demo
+            </Link>
           </div>
 
-          <div className="pt-8 flex flex-wrap justify-center items-center gap-8 text-white/80">
-            <div className="flex items-center space-x-2">
-              <Icon name="CheckCircleIcon" size={20} className="text-white" variant="solid" />
-              <span className="text-sm font-body">No credit card required</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Icon name="ClockIcon" size={20} className="text-white" />
-              <span className="text-sm font-body">30-minute setup</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Icon name="ShieldCheckIcon" size={20} className="text-white" variant="solid" />
-              <span className="text-sm font-body">Enterprise-grade security</span>
+          <div className="mt-12 pt-12 border-t border-white/20">
+            <div className="grid sm:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="flex items-center justify-center space-x-2 mb-2">
+                  <Icon name="ClockIcon" size={24} className="text-white" />
+                  <span className="text-2xl font-headline font-headline-bold text-white">5 min</span>
+                </div>
+                <p className="text-sm text-white/80 font-body">Setup Time</p>
+              </div>
+              <div className="text-center">
+                <div className="flex items-center justify-center space-x-2 mb-2">
+                  <Icon name="ShieldCheckIcon" size={24} className="text-white" variant="solid" />
+                  <span className="text-2xl font-headline font-headline-bold text-white">Zero</span>
+                </div>
+                <p className="text-sm text-white/80 font-body">Integration Risk</p>
+              </div>
+              <div className="text-center">
+                <div className="flex items-center justify-center space-x-2 mb-2">
+                  <Icon name="CurrencyDollarIcon" size={24} className="text-white" />
+                  <span className="text-2xl font-headline font-headline-bold text-white">80%</span>
+                </div>
+                <p className="text-sm text-white/80 font-body">Cost Reduction</p>
+              </div>
             </div>
           </div>
         </div>

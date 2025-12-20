@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import HeroSection from './HeroSection';
 import SolutionsContent from './SolutionsContent';
-
 import CTASection from './CTASection';
 
 const SolutionsInteractive = () => {

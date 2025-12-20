@@ -63,41 +63,48 @@ const features = [
 
 const FeaturesOverview = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <section className="relative h-screen bg-white flex items-center justify-center overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col py-20">
+        {/* Fixed Heading */}
+        <div className="text-center mb-12 flex-shrink-0">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
             ESG Features Overview
           </h2>
+          <div className="mt-4 w-24 h-1 bg-gradient-to-r from-emerald-600 to-emerald-400 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <Link 
-              key={index} 
-              href={feature.href}
-              className="group relative flex flex-col p-8 bg-white border border-gray-100 rounded-2xl hover:bg-emerald-600 shadow-sm hover:shadow-2xl transition-all duration-300 py-10"
-            >
-              <div className="mb-6 text-emerald-600 group-hover:text-white transition-colors duration-300">
-                <Icon name={feature.icon as any} size={40} />
-              </div>
-              
-              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-white transition-colors duration-300">
-                {feature.title}
-              </h3>
-              
-              <p className="text-gray-500 mb-8 leading-relaxed group-hover:text-emerald-50 transition-colors duration-300">
-                {feature.description}
-              </p>
+        {/* Scrollable Content with Gradient Overlays */}
+        <div className="relative flex-1 overflow-hidden">
+          {/* Top Gradient Fade */}
+          <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none"></div>
+          
+          {/* Scrollable Grid */}
+          <div className="h-full overflow-y-auto px-2 scrollbar-hide">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-8">
+              {features.map((feature, index) => (
+                <Link 
+                  key={index} 
+                  href={feature.href}
+                  className="group relative flex flex-col p-8 bg-white border border-gray-100 rounded-2xl hover:bg-emerald-600 shadow-sm hover:shadow-2xl transition-all duration-300 h-fit"
+                >
+                  <div className="mb-6 text-emerald-600 group-hover:text-white transition-colors duration-300">
+                    <Icon name={feature.icon as any} size={40} />
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-white transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  
+                  <p className="text-gray-500 leading-relaxed group-hover:text-emerald-50 transition-colors duration-300">
+                    {feature.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
 
-              {/* <div className="mt-auto flex items-center text-sm font-semibold text-emerald-600 group-hover:text-white transition-colors duration-300">
-                Learn More
-                <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
-                   <Icon name="ArrowRightIcon" size={16} />
-                </span>
-              </div> */}
-            </Link>
-          ))}
+          {/* Bottom Gradient Fade */}
+          <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none"></div>
         </div>
       </div>
     </section>

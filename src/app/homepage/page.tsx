@@ -9,7 +9,6 @@ import SocialProofCarousel from './components/SocialProofCarousel';
 import FeaturesOverview from './components/FeaturesOverview';
 import CTASection from './components/CTASection';
 import Footer from '@/components/common/Footer';
-import NetZeroPopup from '@/components/NetZeroPopup';
 
 export const metadata: Metadata = {
   title: 'EcoVeraZ - Enterprise ESG Verification Platform | Blockchain-Anchored Proof',
@@ -33,7 +32,6 @@ export default function Homepage() {
         <CTASection />
       </main>
       <Footer />
-      <NetZeroPopup />
     </div>
   );
 }

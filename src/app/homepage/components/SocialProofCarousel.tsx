@@ -22,45 +22,87 @@ const SocialProofCarousel = () => {
   const companies: Company[] = [
   {
     id: 1,
-    name: 'Global Mining Corp',
-    logo: "https://img.rocket.new/generatedImages/rocket_gen_img_1afc5b376-1763743353462.png",
-    alt: 'Global Mining Corp logo with mountain peak symbol in dark blue',
-    industry: 'Mining'
+    name: 'Energy Production',
+    logo: "https://img.rocket.new/generatedImages/rocket_gen_img_1f21ad404-1763743353371.png",
+    alt: 'Energy Production logo with lightning bolt and power symbol',
+    industry: 'Energy Production'
   },
   {
     id: 2,
-    name: 'EcoManufacture Ltd',
+    name: 'Manufacturing & Logistics',
     logo: "https://img.rocket.new/generatedImages/rocket_gen_img_1f96b7b53-1763743353097.png",
-    alt: 'EcoManufacture Ltd logo with green leaf and gear icon',
-    industry: 'Manufacturing'
+    alt: 'Manufacturing & Logistics logo with gear and truck icon',
+    industry: 'Manufacturing & Logistics'
   },
   {
     id: 3,
-    name: 'PharmaTech Solutions',
+    name: 'Healthcare & Life Sciences',
     logo: "https://img.rocket.new/generatedImages/rocket_gen_img_19be743c7-1763743353467.png",
-    alt: 'PharmaTech Solutions logo with medical cross and molecule structure',
-    industry: 'Pharmaceutical'
+    alt: 'Healthcare & Life Sciences logo with medical cross and molecule',
+    industry: 'Healthcare & Life Sciences'
   },
   {
     id: 4,
-    name: 'PowerGrid Utilities',
-    logo: "https://img.rocket.new/generatedImages/rocket_gen_img_1f21ad404-1763743353371.png",
-    alt: 'PowerGrid Utilities logo with lightning bolt and grid pattern',
-    industry: 'Utilities'
+    name: 'Retail & E-commerce',
+    logo: "https://img.rocket.new/generatedImages/rocket_gen_img_1df6668c0-1763743354511.png",
+    alt: 'Retail & E-commerce logo with shopping cart and storefront',
+    industry: 'Retail & E-commerce'
   },
   {
     id: 5,
-    name: 'GreenSpace Realty',
-    logo: "https://img.rocket.new/generatedImages/rocket_gen_img_1df6668c0-1763743354511.png",
-    alt: 'GreenSpace Realty logo with building outline and tree symbol',
-    industry: 'Real Estate'
+    name: 'Government',
+    logo: "https://img.rocket.new/generatedImages/rocket_gen_img_17279aa66-1763743353971.png",
+    alt: 'Government logo with government building and flag',
+    industry: 'Government'
   },
   {
     id: 6,
-    name: 'Municipal Services',
+    name: 'Mining',
+    logo: "https://img.rocket.new/generatedImages/rocket_gen_img_1afc5b376-1763743353462.png",
+    alt: 'Mining logo with mountain peak and excavator symbol',
+    industry: 'Mining'
+  },
+  {
+    id: 7,
+    name: 'Pharmaceutical',
+    logo: "https://img.rocket.new/generatedImages/rocket_gen_img_19be743c7-1763743353467.png",
+    alt: 'Pharmaceutical logo with pill and medical symbol',
+    industry: 'Pharmaceutical'
+  },
+  {
+    id: 8,
+    name: 'Leather & Textile',
+    logo: "https://img.rocket.new/generatedImages/rocket_gen_img_1f96b7b53-1763743353097.png",
+    alt: 'Leather & Textile logo with fabric and thread icon',
+    industry: 'Leather & Textile'
+  },
+  {
+    id: 9,
+    name: 'Technology',
+    logo: "https://img.rocket.new/generatedImages/rocket_gen_img_1f21ad404-1763743353371.png",
+    alt: 'Technology logo with circuit board and chip icon',
+    industry: 'Technology'
+  },
+  {
+    id: 10,
+    name: 'Financial Services',
+    logo: "https://img.rocket.new/generatedImages/rocket_gen_img_1df6668c0-1763743354511.png",
+    alt: 'Financial Services logo with bank building and dollar sign',
+    industry: 'Financial Services'
+  },
+  {
+    id: 11,
+    name: 'Agriculture',
+    logo: "https://img.rocket.new/generatedImages/rocket_gen_img_1afc5b376-1763743353462.png",
+    alt: 'Agriculture logo with wheat and tractor symbol',
+    industry: 'Agriculture'
+  },
+  {
+    id: 12,
+    name: 'Construction',
     logo: "https://img.rocket.new/generatedImages/rocket_gen_img_17279aa66-1763743353971.png",
-    alt: 'Municipal Services logo with city skyline and government building',
-    industry: 'Public Sector'
+    alt: 'Construction logo with crane and building icon',
+    industry: 'Construction'
   }];
 
 
@@ -73,7 +115,7 @@ const SocialProofCarousel = () => {
             <span className="text-sm font-body-medium text-primary">Trusted by Industry Leaders</span>
           </div> */}
           <h2 className="text-2xl lg:text-3xl font-headline font-headline-bold text-foreground mb-3">
-            Powering ESG Verification Globally
+            Powering ESG for industries
           </h2>
           {/* <p className="text-base text-text-secondary font-body max-w-2xl mx-auto">
             From mining operations to pharmaceutical manufacturing, enterprises trust EcoVeraZ for audit-grade environmental verification.

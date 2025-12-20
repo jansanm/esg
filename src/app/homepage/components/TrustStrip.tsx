@@ -95,7 +95,10 @@ const TrustStrip = () => {
               <Icon name="ArrowRightIcon" size={24} className="text-muted-foreground group-hover:text-white transition-colors" variant="outline" />
             </div>
           </div>
-        </div> */}
+        </div>
+      </div> */}
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Core Principles Section */}
         {/* <div className="mt-24 text-center">
@@ -139,10 +142,9 @@ const TrustStrip = () => {
           </div>
         </div> */}
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-
+        
         {/* Why Choose EcoVeraZ Section */}
-        <div className="mt-24">
+        {/* <div className="mt-24">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground mb-4">
               Why Choose EcoVeraZ?
@@ -153,7 +155,6 @@ const TrustStrip = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Traditional Ratings Card */}
             <div className="p-8 bg-card border border-border rounded-3xl opacity-80 hover:opacity-100 transition-opacity duration-300">
               <h3 className="text-xl font-headline font-bold text-foreground mb-6">Traditional ratings</h3>
               <ul className="space-y-4 mb-8">
@@ -172,7 +173,6 @@ const TrustStrip = () => {
               </ul>
             </div>
 
-            {/* EcoVeraZ Verification Card */}
             <div className="relative p-8 bg-card border-2 border-success/20 rounded-3xl shadow-2xl shadow-success/5 overflow-hidden group hover:border-success/40 transition-all duration-300">
               <div className="absolute top-0 right-0 p-4 opacity-10">
                 <Icon name="CheckBadgeIcon" size={120} className="text-success" variant="solid" />
@@ -210,7 +210,7 @@ const TrustStrip = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

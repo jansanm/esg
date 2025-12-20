@@ -65,7 +65,7 @@ const PlatformDropdown = ({ onClose }: PlatformDropdownProps) => {
                   className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors group"
                 >
                   <Icon name="ShieldCheckIcon" size={18} className="text-emerald-600 group-hover:text-emerald-700" />
-                  <span className="font-medium">Risk Management</span>
+                  <span className="font-medium">ESG Management</span>
                 </Link>
                 <Link 
                   href="/platform-overview" 
@@ -73,7 +73,7 @@ const PlatformDropdown = ({ onClose }: PlatformDropdownProps) => {
                   className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors group"
                 >
                   <Icon name="BuildingOfficeIcon" size={18} className="text-emerald-600 group-hover:text-emerald-700" />
-                  <span className="font-medium">Life Cycle Assessment</span>
+                  <span className="font-medium">Risk Management</span>
                 </Link>
                 <Link 
                   href="/platform-overview" 
@@ -81,7 +81,7 @@ const PlatformDropdown = ({ onClose }: PlatformDropdownProps) => {
                   className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors group"
                 >
                   <Icon name="ChartBarIcon" size={18} className="text-emerald-600 group-hover:text-emerald-700" />
-                  <span className="font-medium">ESG Management</span>
+                  <span className="font-medium">Life Cycle Assessment</span>
                 </Link>
               </div>
 
@@ -101,7 +101,7 @@ const PlatformDropdown = ({ onClose }: PlatformDropdownProps) => {
                   </Link>
 
                   {/* Hover Menu for Explore Platform */}
-                  {showExploreMenu && (
+                  {/* {showExploreMenu && (
                     <div className="absolute top-full left-0 mt-2 w-auto min-w-[600px] bg-white border border-emerald-200 rounded-lg shadow-xl p-6 z-50">
                       <div className="flex gap-6">
                         <Link 
@@ -130,20 +130,20 @@ const PlatformDropdown = ({ onClose }: PlatformDropdownProps) => {
                         </Link>
                       </div>
                     </div>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>
             
             <div className="flex items-center gap-4 text-xs text-gray-500">
-              <div className="flex items-center gap-1">
+              {/* <div className="flex items-center gap-1">
                  <Icon name="CheckCircleIcon" size={14} className="text-emerald-500" />
                  <span>SOC2 Certified</span>
-              </div>
-              <div className="flex items-center gap-1">
+              </div> */}
+              {/* <div className="flex items-center gap-1">
                  <Icon name="CheckCircleIcon" size={14} className="text-emerald-500" />
                  <span>GDPR Compliant</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

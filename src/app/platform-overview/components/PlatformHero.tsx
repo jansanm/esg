@@ -13,9 +13,91 @@ const PlatformHero = ({ className = '' }: PlatformHeroProps) => {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
       </div>
       
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Management Solutions Cards - Full Screen */}
+        <div className="min-h-screen flex items-center justify-center py-16">
+          <div className="w-full">
+            {/* <div className="text-center mb-12">
+              <h2 className="text-4xl lg:text-5xl font-headline font-headline-bold text-foreground mb-4">
+                Our Solutions
+              </h2>
+              <p className="text-lg text-text-secondary">
+                Choose the right solution for your sustainability journey
+              </p>
+            </div> */}
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* ESG Management Card */}
+              <a
+                href="/404"
+                className="group relative p-10 bg-white border-2 border-gray-200 rounded-3xl hover:border-emerald-600 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer min-h-[400px] flex flex-col"
+              >
+                <div className="flex flex-col items-center text-center space-y-6 flex-1">
+                  <div className="p-6 rounded-2xl bg-emerald-50 group-hover:bg-emerald-100 transition-colors">
+                    <Icon name="ShieldCheckIcon" size={48} className="text-emerald-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">
+                    ESG Management
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed flex-1">
+                    Comprehensive ESG data management and reporting platform for enterprise sustainability. Track, measure, and report on all your ESG metrics in one unified platform.
+                  </p>
+                  <div className="flex items-center text-emerald-600 font-semibold group-hover:gap-2 transition-all pt-4">
+                    Learn more
+                    <Icon name="ArrowRightIcon" size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </a>
+
+              {/* Risk Management Card */}
+              <a
+                href="/404"
+                className="group relative p-10 bg-white border-2 border-gray-200 rounded-3xl hover:border-emerald-600 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer min-h-[400px] flex flex-col"
+              >
+                <div className="flex flex-col items-center text-center space-y-6 flex-1">
+                  <div className="p-6 rounded-2xl bg-emerald-50 group-hover:bg-emerald-100 transition-colors">
+                    <Icon name="BuildingOfficeIcon" size={48} className="text-emerald-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">
+                    Risk Management
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed flex-1">
+                    Identify, assess, and mitigate ESG-related risks across your operations and supply chain. Proactive risk monitoring and compliance management.
+                  </p>
+                  <div className="flex items-center text-emerald-600 font-semibold group-hover:gap-2 transition-all pt-4">
+                    Learn more
+                    <Icon name="ArrowRightIcon" size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </a>
+
+              {/* Life Cycle Assessment Card */}
+              <a
+                href="/404"
+                className="group relative p-10 bg-white border-2 border-gray-200 rounded-3xl hover:border-emerald-600 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer min-h-[400px] flex flex-col"
+              >
+                <div className="flex flex-col items-center text-center space-y-6 flex-1">
+                  <div className="p-6 rounded-2xl bg-emerald-50 group-hover:bg-emerald-100 transition-colors">
+                    <Icon name="ChartBarIcon" size={48} className="text-emerald-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">
+                    Life Cycle Assessment
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed flex-1">
+                    Analyze environmental impacts throughout your product's entire lifecycle from cradle to grave. Comprehensive LCA reporting and optimization.
+                  </p>
+                  <div className="flex items-center text-emerald-600 font-semibold group-hover:gap-2 transition-all pt-4">
+                    Learn more
+                    <Icon name="ArrowRightIcon" size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* Verified by Design Section */}
-        <div className="space-y-12">
+        <div className="space-y-12 py-16">
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <h1 className="text-4xl lg:text-5xl font-headline font-headline-bold text-foreground leading-tight">
               Verified by Design
