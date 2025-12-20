@@ -70,136 +70,65 @@ const PlatformDropdown = ({ onClose }: PlatformDropdownProps) => {
 
   return (
     <div className="absolute top-full left-0 w-full bg-white border-t-2 border-emerald-600 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-300 z-50">
-      <div className="max-w-7xl mx-auto flex min-h-[400px]">
-        {/* Featured Section (Left) */}
-        <div className="w-1/3 p-10 border-r border-gray-200 bg-gradient-to-b from-emerald-50 to-white">
-          <div className="h-full flex flex-col justify-between">
-            <div>
-              {/* Management Solutions */}
-              <div className="space-y-3 mb-8">
-                <Link 
-                  href="/platform-overview" 
-                  onClick={onClose}
-                  className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors group"
-                >
-                  <Icon name="ShieldCheckIcon" size={18} className="text-emerald-600 group-hover:text-emerald-700" />
-                  <span className="font-medium">ESG Management</span>
-                </Link>
-                <Link 
-                  href="/platform-overview" 
-                  onClick={onClose}
-                  className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors group"
-                >
-                  <Icon name="BuildingOfficeIcon" size={18} className="text-emerald-600 group-hover:text-emerald-700" />
-                  <span className="font-medium">Risk Management</span>
-                </Link>
-                <Link 
-                  href="/platform-overview" 
-                  onClick={onClose}
-                  className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors group"
-                >
-                  <Icon name="ChartBarIcon" size={18} className="text-emerald-600 group-hover:text-emerald-700" />
-                  <span className="font-medium">Life Cycle Assessment</span>
-                </Link>
-              </div>
-
-              <div className="relative">
-                <div 
-                  onMouseEnter={() => setShowExploreMenu(true)}
-                  onMouseLeave={() => setShowExploreMenu(false)}
-                  className="relative"
-                >
-                  <Link 
-                    href="/platform-overview" 
-                    onClick={onClose}
-                    className="inline-flex items-center px-6 py-3 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 hover:shadow-lg hover:-translate-y-0.5 rounded-lg transition-all duration-200"
-                  >
-                    Explore Platform
-                    <Icon name="ArrowRightIcon" size={16} className="ml-2" />
-                  </Link>
-
-                  {/* Hover Menu for Explore Platform */}
-                  {/* {showExploreMenu && (
-                    <div className="absolute top-full left-0 mt-2 w-auto min-w-[600px] bg-white border border-emerald-200 rounded-lg shadow-xl p-6 z-50">
-                      <div className="flex gap-6">
-                        <Link 
-                          href="/platform-overview" 
-                          onClick={onClose}
-                          className="flex flex-col items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors group p-4 rounded-lg hover:bg-emerald-50"
-                        >
-                          <Icon name="ShieldCheckIcon" size={24} className="text-emerald-600 group-hover:text-emerald-700" />
-                          <span className="font-medium text-center">Risk Management</span>
-                        </Link>
-                        <Link 
-                          href="/platform-overview" 
-                          onClick={onClose}
-                          className="flex flex-col items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors group p-4 rounded-lg hover:bg-emerald-50"
-                        >
-                          <Icon name="BuildingOfficeIcon" size={24} className="text-emerald-600 group-hover:text-emerald-700" />
-                          <span className="font-medium text-center">Life Cycle Assessment</span>
-                        </Link>
-                        <Link 
-                          href="/platform-overview" 
-                          onClick={onClose}
-                          className="flex flex-col items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors group p-4 rounded-lg hover:bg-emerald-50"
-                        >
-                          <Icon name="ChartBarIcon" size={24} className="text-emerald-600 group-hover:text-emerald-700" />
-                          <span className="font-medium text-center">ESG Management</span>
-                        </Link>
-                      </div>
-                    </div>
-                  )} */}
-                </div>
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-4 text-xs text-gray-500">
-              {/* <div className="flex items-center gap-1">
-                 <Icon name="CheckCircleIcon" size={14} className="text-emerald-500" />
-                 <span>SOC2 Certified</span>
-              </div> */}
-              {/* <div className="flex items-center gap-1">
-                 <Icon name="CheckCircleIcon" size={14} className="text-emerald-500" />
-                 <span>GDPR Compliant</span>
-              </div> */}
-            </div>
-          </div>
+      <div className="max-w-7xl mx-auto p-8">
+        {/* Top Section - Main Categories */}
+        <div className="flex items-center gap-6 mb-8 pb-6 border-b border-gray-200">
+          <Link 
+            href="/platform-overview" 
+            onClick={onClose}
+            className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors group px-4 py-2 rounded-lg hover:bg-emerald-50"
+          >
+            <Icon name="ShieldCheckIcon" size={20} className="text-emerald-600 group-hover:text-emerald-700" />
+            <span className="font-semibold">ESG Management</span>
+          </Link>
+          <Link 
+            href="/platform-overview" 
+            onClick={onClose}
+            className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors group px-4 py-2 rounded-lg hover:bg-emerald-50"
+          >
+            <Icon name="BuildingOfficeIcon" size={20} className="text-emerald-600 group-hover:text-emerald-700" />
+            <span className="font-semibold">Risk Management</span>
+          </Link>
+          <Link 
+            href="/platform-overview" 
+            onClick={onClose}
+            className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors group px-4 py-2 rounded-lg hover:bg-emerald-50"
+          >
+            <Icon name="ChartBarIcon" size={20} className="text-emerald-600 group-hover:text-emerald-700" />
+            <span className="font-semibold">Life Cycle Assessment</span>
+          </Link>
         </div>
 
-        {/* Platform Grid (Right) */}
-        <div className="w-2/3 p-10">
-          <div className="grid grid-cols-3 gap-6">
+        {/* Platform Features Grid */}
+        <div className="mb-8">
+          <h4 className="text-sm font-bold text-emerald-700 uppercase tracking-wider mb-6">Platform Features</h4>
+          <div className="grid grid-cols-3 gap-4">
             {platform.map((item) => (
-              <Link 
-                key={item.title} 
+              <Link
+                key={item.title}
                 href={item.href}
                 onClick={onClose}
-                className="group p-4 rounded-xl border border-gray-200 hover:border-emerald-600 hover:bg-emerald-50 transition-all duration-200 hover:shadow-md"
+                className="flex items-center gap-3 p-4 rounded-lg border border-gray-200 hover:border-emerald-600 hover:bg-emerald-50 transition-all duration-200 group"
               >
-                <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-gray-100 group-hover:bg-emerald-100 transition-colors">
-                    <Icon 
-                      name={item.icon} 
-                      size={20} 
-                      className="text-gray-600 group-hover:text-emerald-700 transition-colors" 
-                    />
-                  </div>
-                  <h4 className="text-sm font-semibold text-gray-800 group-hover:text-emerald-700 transition-colors">
-                    {item.title}
-                  </h4>
+                <div className="p-2 rounded-lg bg-gray-100 group-hover:bg-emerald-100 transition-colors">
+                  <Icon name={item.icon} size={20} className="text-gray-600 group-hover:text-emerald-600" />
                 </div>
+                <span className="text-sm font-semibold text-gray-700 group-hover:text-emerald-700">{item.title}</span>
               </Link>
             ))}
           </div>
-          
-          <div className="mt-8 pt-6 border-t border-gray-200 flex justify-between items-center">
-             {/* <div className="text-sm text-gray-500">
-                Looking for something specific?
-             </div> */}
-             <Link href="/solutions-hub" onClick={onClose} className="text-sm font-medium text-emerald-600 hover:text-emerald-700 flex items-center gap-1 transition-colors">
-                View all solutions <Icon name="ArrowRightIcon" size={14} />
-             </Link>
-          </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="flex justify-center pt-6 border-t border-gray-200">
+          <Link 
+            href="/platform-overview" 
+            onClick={onClose}
+            className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg shadow-emerald-600/20 hover:-translate-y-0.5 transition-all duration-200"
+          >
+            Explore Platform
+            <Icon name="ArrowRightIcon" size={16} />
+          </Link>
         </div>
       </div>
     </div>

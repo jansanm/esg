@@ -71,16 +71,37 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-2 group">
-                <label className="text-sm font-semibold text-gray-700 group-focus-within:text-emerald-600 transition-colors">Email</label>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none text-gray-400 group-focus-within:text-emerald-600 transition-colors">
-                    <Icon name="EnvelopeIcon" size={20} />
+                <label className="text-sm font-semibold text-gray-700 group-focus-within:text-emerald-600 transition-colors">Mobile Number</label>
+                <div className="flex gap-3">
+                  <div className="relative w-32">
+                    <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none text-gray-400 group-focus-within:text-emerald-600 transition-colors">
+                      <Icon name="GlobeAltIcon" size={20} />
+                    </div>
+                    <select 
+                      className="w-full pl-8 pr-2 py-3 border-b border-gray-300 focus:border-emerald-600 outline-none transition-all bg-transparent text-gray-700 rounded-none appearance-none cursor-pointer"
+                    >
+                      <option value="+1">🇺🇸 +1</option>
+                      <option value="+44">🇬🇧 +44</option>
+                      <option value="+91">🇮🇳 +91</option>
+                      <option value="+86">🇨🇳 +86</option>
+                      <option value="+81">🇯🇵 +81</option>
+                      <option value="+49">🇩🇪 +49</option>
+                      <option value="+33">🇫🇷 +33</option>
+                      <option value="+61">🇦🇺 +61</option>
+                      <option value="+971">🇦🇪 +971</option>
+                      <option value="+65">🇸🇬 +65</option>
+                    </select>
                   </div>
-                  <input 
-                    type="email" 
-                    className="w-full pl-8 pr-4 py-3 border-b border-gray-300 focus:border-emerald-600 outline-none transition-all bg-transparent placeholder:text-gray-400 rounded-none"
-                    placeholder="jane@company.com"
-                  />
+                  <div className="relative flex-1">
+                    <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none text-gray-400 group-focus-within:text-emerald-600 transition-colors">
+                      <Icon name="PhoneIcon" size={20} />
+                    </div>
+                    <input 
+                      type="tel" 
+                      className="w-full pl-8 pr-4 py-3 border-b border-gray-300 focus:border-emerald-600 outline-none transition-all bg-transparent placeholder:text-gray-400 rounded-none"
+                      placeholder="123 456 7890"
+                    />
+                  </div>
                 </div>
               </div>
 

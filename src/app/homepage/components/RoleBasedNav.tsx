@@ -84,7 +84,7 @@ const RoleBasedNavigation = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-headline font-headline-bold text-foreground mb-4">
-            Built for Your Role
+            Built for your role
           </h2>
           <p className="text-lg text-text-secondary font-body max-w-3xl mx-auto">
             EcoVeraZ adapts to your specific needs, whether you’re running business, ensuring compliance, optimizing operations, or making investment decisions.
