@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/common/Header';
 import HeroSection from './components/HeroSection';
 import VideoSection from './components/VideoSection';
+import ESGPlatformSection from './components/ESGPlatformSection';
 import AlignmentStrip from './components/AlignmentStrip';
 import TrustStrip from './components/TrustStrip';
 import RoleBasedNavigation from './components/RoleBasedNav';
@@ -22,6 +23,7 @@ export default function Homepage() {
       <main>
         <HeroSection />
         <VideoSection />
+        <ESGPlatformSection />
         <FeaturesOverview />
 
         <TrustStrip />

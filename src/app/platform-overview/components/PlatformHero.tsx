@@ -97,7 +97,7 @@ const PlatformHero = ({ className = '' }: PlatformHeroProps) => {
         </div>
 
         {/* Verified by Design Section */}
-        <div className="space-y-12 py-16">
+        {/* <div className="space-y-12 py-16">
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <h1 className="text-4xl lg:text-5xl font-headline font-headline-bold text-foreground leading-tight">
               Verified by Design
@@ -167,7 +167,7 @@ const PlatformHero = ({ className = '' }: PlatformHeroProps) => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>);
 

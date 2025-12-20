@@ -74,14 +74,14 @@ const AlignmentStrip = () => {
                   </div>
                 </div>
               ))}
-            </div>
-
-            {/* Bottom Info Text */}
-            <div className="text-center pb-6">
-              <p className="text-gray-500 text-sm font-medium flex items-center justify-center gap-2">
-                <Icon name="ShieldCheckIcon" size={16} className="text-emerald-500" />
-                Seamlessly integrate with all major sustainability standards and regulatory requirements
-              </p>
+              
+              {/* Integration Text - Next to Last Card, Same Row */}
+              <div className="lg:col-span-3 flex items-center pl-8">
+                <p className="text-gray-700 text-xl font-medium flex items-center gap-2">
+                  <Icon name="ShieldCheckIcon" size={24} className="text-emerald-600 flex-shrink-0" />
+                  Seamlessly integrate with all major sustainability standards and regulatory requirements
+                </p>
+              </div>
             </div>
           </div>
 

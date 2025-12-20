@@ -26,39 +26,39 @@ const Footer = () => {
 
   const footerSections: FooterSection[] = [
     {
-      title: 'Platform',
+      title: 'PLATFORM',
       links: [
         { label: 'Overview', href: '/platform-overview' },
-        { label: 'Solutions', href: '/solutions-hub' },
-        { label: 'Standards', href: '/standards-and-compliance' },
+        { label: 'ESG Management', href: '/platform-overview' },
+        { label: 'Risk Management', href: '/platform-overview' },
+        { label: 'Life Cycle Assessment', href: '/platform-overview' },
+      ],
+    },
+    {
+      title: 'SOLUTIONS',
+      links: [
+        { label: 'Industries', href: '/solutions-hub' },
+        { label: 'Compliance & Regulations', href: '/standards-and-compliance' },
         { label: 'Case Studies', href: '/proof-and-case-studies' },
+        { label: 'View All Solutions', href: '/solutions-hub' },
       ],
     },
     {
-      title: 'Resources',
+      title: 'RESOURCES',
       links: [
-        { label: 'Documentation', href: '/platform-overview' },
-        { label: 'Pricing', href: '/pricing-and-roi-calculator' },
-        { label: 'ROI Calculator', href: '/pricing-and-roi-calculator' },
-        { label: 'Support', href: '/homepage' },
+        { label: 'Company', href: '/about/company' },
+        { label: 'News', href: '/about/news' },
+        { label: 'Events', href: '/about/events' },
+        { label: 'Careers', href: '/about/careers' },
       ],
     },
     {
-      title: 'Company',
+      title: 'COMPANY',
       links: [
-        { label: 'About Us', href: '/homepage' },
-        { label: 'Careers', href: '/homepage' },
-        { label: 'Partners', href: '/homepage' },
-        { label: 'Contact', href: '/homepage' },
-      ],
-    },
-    {
-      title: 'Legal',
-      links: [
-        { label: 'Privacy Policy', href: '/homepage' },
-        { label: 'Terms of Service', href: '/homepage' },
-        { label: 'Security', href: '/homepage' },
-        { label: 'Compliance', href: '/standards-and-compliance' },
+        { label: 'About Us', href: '/about/company' },
+        { label: 'Team', href: '/about/team' },
+        { label: 'Partners', href: '/about/partners' },
+        { label: 'Contact Us', href: '/contact' },
       ],
     },
   ];
@@ -126,15 +126,15 @@ const Footer = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
           {/* Brand Description Column */}
-          <div className="lg:col-span-4 space-y-6">
+          <div className="lg:col-span-3 space-y-6">
             <p className="text-gray-400 font-body leading-relaxed max-w-sm">
               Enterprise ESG verification platform delivering blockchain-anchored proof for audit-grade environmental compliance.
             </p>
           </div>
 
-          {/* Links Columns */}
-          <div className="lg:col-span-5 grid grid-cols-2 sm:grid-cols-3 gap-8">
-            {footerSections.slice(0, 3).map((section) => (
+          {/* Links Columns - All 4 sections */}
+          <div className="lg:col-span-6 grid grid-cols-2 sm:grid-cols-4 gap-8">
+            {footerSections.map((section) => (
               <div key={section.title}>
                 <h3 className="text-sm font-semibold text-white tracking-wide uppercase mb-6">{section.title}</h3>
                 <ul className="space-y-4">
@@ -142,7 +142,7 @@ const Footer = () => {
                     <li key={link.label}>
                       <Link
                         href={link.href}
-                        className="text-sm text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 inline-block"
+                        className="text-sm text-gray-400 hover:text-emerald-400 hover:translate-x-1 transition-all duration-200 inline-block"
                       >
                         {link.label}
                       </Link>
@@ -155,7 +155,7 @@ const Footer = () => {
 
           {/* Newsletter Column */}
           <div className="lg:col-span-3 space-y-6">
-            <h3 className="text-sm font-semibold text-white tracking-wide uppercase">Stay Updated</h3>
+            <h3 className="text-sm font-semibold text-white tracking-wide uppercase">STAY UPDATED</h3>
             <p className="text-sm text-gray-400">
               Subscribe to our newsletter for the latest ESG insights and platform updates.
             </p>
@@ -184,15 +184,30 @@ const Footer = () => {
               {isHydrated ? `© ${currentYear}` : '© 2025'} EcoVeraZ. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-               {footerSections[3].links.map((link) => (
-                  <Link 
-                    key={link.label} 
-                    href={link.href}
-                    className="text-sm text-gray-500 hover:text-gray-300 transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-               ))}
+              <Link 
+                href="/homepage"
+                className="text-sm text-gray-500 hover:text-emerald-400 transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link 
+                href="/homepage"
+                className="text-sm text-gray-500 hover:text-emerald-400 transition-colors"
+              >
+                Terms of Service
+              </Link>
+              <Link 
+                href="/homepage"
+                className="text-sm text-gray-500 hover:text-emerald-400 transition-colors"
+              >
+                Security
+              </Link>
+              <Link 
+                href="/standards-and-compliance"
+                className="text-sm text-gray-500 hover:text-emerald-400 transition-colors"
+              >
+                Compliance
+              </Link>
             </div>
           </div>
         </div>

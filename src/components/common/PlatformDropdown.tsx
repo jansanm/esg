@@ -13,40 +13,58 @@ const PlatformDropdown = ({ onClose }: PlatformDropdownProps) => {
 
   const platform = [
     {
-      title: 'ESG Reporting',
-      description: 'Automated framework-aligned reporting.',
-      icon: 'ChartBarIcon',
+      title: 'Automated Data Collection',
+      description: 'Seamlessly gather environmental data from IoT sensors, ERP systems, and utility bills.',
+      icon: 'CloudArrowUpIcon',
       href: '/platform-overview',
     },
     {
-      title: 'Carbon Analytics',
-      description: 'Real-time carbon footprint tracking.',
+      title: 'Carbon Footprint Tracking',
+      description: 'Real-time monitoring of Scope 1, 2, and 3 emissions for net-zero goals.',
       icon: 'GlobeAltIcon',
       href: '/platform-overview',
     },
     {
-      title: 'Supply Chain',
-      description: 'Deep tier visibility and risk scoring.',
-      icon: 'TruckIcon',
-      href: '/solutions-hub',
-    },
-    {
-      title: 'Compliance',
-      description: 'Stay ahead of global regulations.',
+      title: 'Regulatory Compliance',
+      description: 'Automated reporting for CSRD, ISSB, SASB, and other global standards.',
       icon: 'DocumentTextIcon',
       href: '/standards-and-compliance',
     },
     {
-      title: 'AI Insights',
-      description: 'Predictive modeling for sustainability.',
+      title: 'Supply Chain Visibility',
+      description: 'Track sustainability performance across your entire value chain.',
+      icon: 'TruckIcon',
+      href: '/solutions-hub',
+    },
+    {
+      title: 'Social Impact Monitoring',
+      description: 'Measure social responsibility from labor practices to community engagement.',
+      icon: 'UserGroupIcon',
+      href: '/platform-overview',
+    },
+    {
+      title: 'Governance & Risk',
+      description: 'Strengthen corporate governance with transparent oversight tools.',
+      icon: 'ShieldCheckIcon',
+      href: '/platform-overview',
+    },
+    {
+      title: 'AI-Powered Insights',
+      description: 'Predictive analytics to identify optimization opportunities.',
       icon: 'CpuChipIcon',
       href: '/platform-overview',
     },
     {
-      title: 'Integrations',
-      description: 'Connect with your existing ERP data.',
-      icon: 'LinkIcon',
-      href: '/solutions-hub',
+      title: 'Resource Management',
+      description: 'Optimize water, waste, and energy usage with efficiency recommendations.',
+      icon: 'BeakerIcon',
+      href: '/platform-overview',
+    },
+    {
+      title: 'Audit-Ready Reporting',
+      description: 'Generate reports that meet auditor requirements and regulatory standards.',
+      icon: 'ClipboardDocumentCheckIcon',
+      href: '/platform-overview',
     },
   ];
 
@@ -150,7 +168,7 @@ const PlatformDropdown = ({ onClose }: PlatformDropdownProps) => {
 
         {/* Platform Grid (Right) */}
         <div className="w-2/3 p-10">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-3 gap-6">
             {platform.map((item) => (
               <Link 
                 key={item.title} 
@@ -158,31 +176,26 @@ const PlatformDropdown = ({ onClose }: PlatformDropdownProps) => {
                 onClick={onClose}
                 className="group p-4 rounded-xl border border-gray-200 hover:border-emerald-600 hover:bg-emerald-50 transition-all duration-200 hover:shadow-md"
               >
-                <div className="flex items-start gap-4">
+                <div className="flex items-center gap-3">
                   <div className="p-2 rounded-lg bg-gray-100 group-hover:bg-emerald-100 transition-colors">
                     <Icon 
                       name={item.icon} 
-                      size={24} 
+                      size={20} 
                       className="text-gray-600 group-hover:text-emerald-700 transition-colors" 
                     />
                   </div>
-                  <div>
-                    <h4 className="text-base font-semibold text-gray-800 group-hover:text-emerald-700 transition-colors">
-                      {item.title}
-                    </h4>
-                    <p className="text-sm text-gray-600 group-hover:text-gray-700 mt-1">
-                      {item.description}
-                    </p>
-                  </div>
+                  <h4 className="text-sm font-semibold text-gray-800 group-hover:text-emerald-700 transition-colors">
+                    {item.title}
+                  </h4>
                 </div>
               </Link>
             ))}
           </div>
           
           <div className="mt-8 pt-6 border-t border-gray-200 flex justify-between items-center">
-             <div className="text-sm text-gray-500">
+             {/* <div className="text-sm text-gray-500">
                 Looking for something specific?
-             </div>
+             </div> */}
              <Link href="/solutions-hub" onClick={onClose} className="text-sm font-medium text-emerald-600 hover:text-emerald-700 flex items-center gap-1 transition-colors">
                 View all solutions <Icon name="ArrowRightIcon" size={14} />
              </Link>

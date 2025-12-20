@@ -250,7 +250,7 @@ const SolutionsContent = () => {
       </section>
 
       {/* Reference Sources Section */}
-      <section className="py-16 bg-white border-t border-border">
+      {/* <section className="py-16 bg-white border-t border-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-2xl font-headline font-headline-bold text-foreground mb-10 text-center">
             Reference Sources
@@ -258,7 +258,7 @@ const SolutionsContent = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {/* UN & Agencies */}
-            <div>
+            {/* <div>
               <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-4">UN & Agencies</h3>
               <ul className="space-y-3">
                 <li>
@@ -280,10 +280,10 @@ const SolutionsContent = () => {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             {/* Reporting */}
-            <div>
+            {/* <div>
               <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-4">Reporting</h3>
               <ul className="space-y-3">
                 <li>
@@ -305,10 +305,10 @@ const SolutionsContent = () => {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             {/* Methodologies */}
-            <div>
+            {/* <div>
               <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-4">Methodologies</h3>
               <ul className="space-y-3">
                 <li>
@@ -318,10 +318,10 @@ const SolutionsContent = () => {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             {/* Procurement */}
-            <div>
+            {/* <div>
               <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-4">Procurement</h3>
               <ul className="space-y-3">
                 <li>
@@ -331,10 +331,10 @@ const SolutionsContent = () => {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             {/* Finance */}
-            <div>
+            {/* <div>
               <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-4">Finance</h3>
               <ul className="space-y-3">
                 <li>
@@ -343,13 +343,13 @@ const SolutionsContent = () => {
                   </span>
                 </li>
               </ul>
-            </div>
-          </div>
+            </div> */}
+          {/* </div>
         </div>
-      </section>
+      </section> */}
 
       {/* VSIP & the UN SDGs Section */}
-      <section className="py-20 bg-muted/30">
+      {/* <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl lg:text-4xl font-headline font-headline-bold text-foreground mb-4">
@@ -392,7 +392,7 @@ const SolutionsContent = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Guides & Downloads Section */}
       <section className="py-20 bg-white border-t border-border">
@@ -456,7 +456,7 @@ const SolutionsContent = () => {
           </div>
 
           {/* Downloads */}
-          <div>
+          {/* <div>
             <div className="mb-10">
               <h2 className="text-3xl font-headline font-headline-bold text-foreground mb-4">
                 Downloads
@@ -510,7 +510,7 @@ const SolutionsContent = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
         </div>
       </section>

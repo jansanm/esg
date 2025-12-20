@@ -107,7 +107,7 @@ const SocialProofCarousel = () => {
 
 
   return (
-    <section className="bg-muted py-16">
+    <section className="bg-muted py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
           {/* <div className="inline-flex items-center space-x-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
@@ -122,23 +122,61 @@ const SocialProofCarousel = () => {
           </p> */}
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {companies.map((company) =>
-          <div
-            key={company.id}
-            className="group bg-card border border-border hover:border-primary/30 rounded-xl p-6 transition-smooth hover:shadow-card flex flex-col items-center justify-center">
-
-              <div className="relative w-full h-16 mb-3 overflow-hidden rounded-lg">
-                <AppImage
-                src={company.logo}
-                alt={company.alt}
-                className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-smooth" />
-
+        {/* Infinite Scrolling Container */}
+        <div className="relative">
+          <div className="flex animate-scroll-loop">
+            {/* First set of cards */}
+            {companies.map((company) => (
+              <div
+                key={`first-${company.id}`}
+                className="group bg-card border border-border hover:border-primary/30 rounded-xl p-6 transition-smooth hover:shadow-card flex flex-col items-center justify-center min-w-[200px] mx-3"
+              >
+                <div className="relative w-full h-16 mb-3 overflow-hidden rounded-lg">
+                  <AppImage
+                    src={company.logo}
+                    alt={company.alt}
+                    className="w-full h-full object-contain transition-smooth"
+                  />
+                </div>
+                <span className="text-xs text-muted-foreground font-body text-center">{company.industry}</span>
               </div>
-              <span className="text-xs text-muted-foreground font-body text-center">{company.industry}</span>
-            </div>
-          )}
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {companies.map((company) => (
+              <div
+                key={`second-${company.id}`}
+                className="group bg-card border border-border hover:border-primary/30 rounded-xl p-6 transition-smooth hover:shadow-card flex flex-col items-center justify-center min-w-[200px] mx-3"
+              >
+                <div className="relative w-full h-16 mb-3 overflow-hidden rounded-lg">
+                  <AppImage
+                    src={company.logo}
+                    alt={company.alt}
+                    className="w-full h-full object-contain transition-smooth"
+                  />
+                </div>
+                <span className="text-xs text-muted-foreground font-body text-center">{company.industry}</span>
+              </div>
+            ))}
+          </div>
         </div>
+
+        <style jsx>{`
+          @keyframes scroll-loop {
+            from {
+              transform: translateX(0);
+            }
+            to {
+              transform: translateX(-50%);
+            }
+          }
+          .animate-scroll-loop {
+            animation: scroll-loop 20s linear infinite;
+            will-change: transform;
+          }
+          .animate-scroll-loop:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
 
         {/* <div className="mt-12 grid md:grid-cols-3 gap-8">
           <div className="text-center">

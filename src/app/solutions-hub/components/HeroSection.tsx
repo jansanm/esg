@@ -132,8 +132,9 @@ const HeroSection = () => {
           </div>
         </div>
 
+
         {/* Industry Sectors */}
-        <div className="mt-24">
+        {/* <div className="mt-24">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-headline font-headline-bold text-foreground mb-4">
               Industry Sectors
@@ -225,7 +226,7 @@ const HeroSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

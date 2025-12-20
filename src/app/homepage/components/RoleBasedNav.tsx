@@ -26,7 +26,7 @@ const RoleBasedNavigation = () => {
     {
       id: 0,
       title: 'C-suite audience',
-      description: 'Strategic insights on various global compliance and operational excellence.',
+      description: 'Strategic insights on various global compliances and operational excellence.',
       icon: 'BriefcaseIcon',
       color: 'from-purple-600 to-indigo-700',
       link: '/solutions-hub',
@@ -87,7 +87,7 @@ const RoleBasedNavigation = () => {
             Built for Your Role
           </h2>
           <p className="text-lg text-text-secondary font-body max-w-3xl mx-auto">
-            EcoVeraZ adapts to your specific needs, whether you’re running a business, ensuring compliance, optimizing operations, or making investment decisions..
+            EcoVeraZ adapts to your specific needs, whether you’re running business, ensuring compliance, optimizing operations, or making investment decisions.
           </p>
         </div>
 

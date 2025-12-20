@@ -20,13 +20,13 @@ export default function PlatformOverviewPage() {
     <main className="min-h-screen bg-background">
       <Header />
       <PlatformHero />
-      <PlatformStats />
-      <SocialProofCarousel />
+      {/* <PlatformStats /> */}
+      {/* <SocialProofCarousel /> */}
       {/* PlatformTabs removed */}
-      <TechnicalArchitecture />
+      {/* <TechnicalArchitecture /> */}
       {/* InteractiveDemo removed */}
       {/* IntegrationPartners removed */}
-      <TechnicalResources />
+      {/* <TechnicalResources /> */}
       <CTASection />
       <Footer />
     </main>
