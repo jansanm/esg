@@ -46,10 +46,10 @@ const NetZeroPopup = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-2 sm:gap-3">
       {/* Chat Popup */}
       {isExpanded && (
-        <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 p-6 w-80 animate-in slide-in-from-bottom-5 duration-300">
+        <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl border border-gray-200 p-4 sm:p-6 w-[calc(100vw-2rem)] max-w-[320px] sm:w-80 animate-in slide-in-from-bottom-5 duration-300">
           {/* Close Button */}
           <button
             onClick={handleClose}
@@ -61,7 +61,7 @@ const NetZeroPopup = () => {
 
           {/* Question */}
           <div className="mb-4">
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
+            <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 pr-6">
               By when do you plan to achieve your Net-Zero target?
             </h3>
             {/* <p className="text-sm text-gray-600">
@@ -70,19 +70,19 @@ const NetZeroPopup = () => {
           </div>
 
           {/* Options */}
-          <div className="space-y-2">
+          <div className="space-y-1.5 sm:space-y-2">
             {options.map((option) => (
               <button
                 key={option.id}
                 onClick={() => handleOptionSelect(option.value)}
-                className={`w-full text-left px-4 py-3 rounded-lg border-2 transition-all duration-200 ${
+                className={`w-full text-left px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border-2 transition-all duration-200 ${
                   selectedOption === option.value
                     ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
                     : 'border-gray-200 hover:border-emerald-300 hover:bg-emerald-50/50 text-gray-700'
                 }`}
               >
                 <div className="flex items-center justify-between">
-                  <span className="font-medium">{option.label}</span>
+                  <span className="font-medium text-sm sm:text-base">{option.label}</span>
                   {selectedOption === option.value && (
                     <Icon name="CheckIcon" size={20} className="text-emerald-600" />
                   )}
@@ -106,10 +106,10 @@ const NetZeroPopup = () => {
       {/* Lightbulb Button */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="bg-gradient-to-br from-yellow-400 to-orange-500 text-white rounded-full p-4 shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 animate-bounce"
+        className="bg-gradient-to-br from-yellow-400 to-orange-500 text-white rounded-full p-3 sm:p-4 shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 animate-bounce"
         aria-label="Net-Zero Survey"
       >
-        <Icon name="LightBulbIcon" size={28} />
+        <Icon name="LightBulbIcon" size={24} className="sm:w-7 sm:h-7" />
       </button>
     </div>
   );

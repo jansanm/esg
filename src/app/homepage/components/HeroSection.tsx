@@ -20,7 +20,7 @@ const cards: HeroCard[] = [
     id: 2,
     slug: 'intelligence',
     headline: 'Real-Time ESG Intelligence for Enterprise.',
-    subheadline: 'Audit-ready compliances and AI-driven analytics.',
+    subheadline: 'Audit-ready reports and AI-driven analytics.',
     ctaLabel: 'Request Demo',
     ctaHref: '/platform-overview',
     imageSrc: '/esg-updated.png',
