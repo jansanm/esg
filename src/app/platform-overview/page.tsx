@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/common/Header';
 import PlatformHero from './components/PlatformHero';
 import PlatformStats from './components/PlatformStats';
+import PlatformDetailedContent from './components/PlatformDetailedContent';
 import SocialProofCarousel from '@/app/homepage/components/SocialProofCarousel';
 import TechnicalArchitecture from './components/TechnicalArchitecture';
 
@@ -20,6 +21,7 @@ export default function PlatformOverviewPage() {
     <main className="min-h-screen bg-background">
       <Header />
       <PlatformHero />
+      <PlatformDetailedContent />
       {/* <PlatformStats /> */}
       {/* <SocialProofCarousel /> */}
       {/* PlatformTabs removed */}

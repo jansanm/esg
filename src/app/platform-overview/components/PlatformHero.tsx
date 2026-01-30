@@ -29,7 +29,7 @@ const PlatformHero = ({ className = '' }: PlatformHeroProps) => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* ESG Management Card */}
               <a
-                href="/404"
+                href="/solutions/esg-management"
                 className="group relative p-10 bg-white border-2 border-gray-200 rounded-3xl hover:border-emerald-600 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer min-h-[400px] flex flex-col"
               >
                 <div className="flex flex-col items-center text-center space-y-6 flex-1">
@@ -51,7 +51,7 @@ const PlatformHero = ({ className = '' }: PlatformHeroProps) => {
 
               {/* Risk Management Card */}
               <a
-                href="/404"
+                href="/solutions/risk-management"
                 className="group relative p-10 bg-white border-2 border-gray-200 rounded-3xl hover:border-emerald-600 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer min-h-[400px] flex flex-col"
               >
                 <div className="flex flex-col items-center text-center space-y-6 flex-1">
@@ -73,7 +73,7 @@ const PlatformHero = ({ className = '' }: PlatformHeroProps) => {
 
               {/* Life Cycle Assessment Card */}
               <a
-                href="/404"
+                href="/solutions/life-cycle-assessment"
                 className="group relative p-10 bg-white border-2 border-gray-200 rounded-3xl hover:border-emerald-600 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer min-h-[400px] flex flex-col"
               >
                 <div className="flex flex-col items-center text-center space-y-6 flex-1">
