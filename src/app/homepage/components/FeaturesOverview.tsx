@@ -6,56 +6,56 @@ import Icon from '@/components/ui/AppIcon';
 
 const features = [
   {
-    title: 'Automated Data Collection',
-    description: 'Seamlessly gather environmental data from IoT sensors, ERP systems, and utility bills without manual entry.',
+    title: 'Evidence Automation',
+    description: 'Continuous generation of evidence packs without manual intervention across all facilities.',
     icon: 'CloudArrowUpIcon',
     href: '/platform-overview'
   },
   {
-    title: 'Carbon Footprint Tracking',
-    description: 'Real-time monitoring of Scope 1, 2, and 3 emissions to ensure you stay on track with net-zero goals.',
+    title: 'Data Lineage Tracking',
+    description: 'Complete audit trail from operational source to calculation to final report artifact.',
     icon: 'ChartBarIcon',
     href: '/platform-overview'
   },
   {
-    title: 'Regulatory Compliance',
-    description: 'Stay audit-ready with automated reporting for CSRD, ISSB, SASB, and other global standards.',
+    title: 'Regulatory Readiness',
+    description: 'Documentation structured for CSRD, SEC climate rules, and ISO 14064 verification.',
     icon: 'DocumentCheckIcon',
     href: '/standards-and-compliance'
   },
   {
-    title: 'Supply Chain Visibility',
-    description: 'Track sustainability performance across your entire value chain and engage suppliers effectively.',
+    title: 'Enterprise Scalability',
+    description: 'Multi-site, multi-region aggregation with custom calculation engines for industry metrics.',
     icon: 'TruckIcon',
     href: '/solutions-hub'
   },
   {
-    title: 'Social Impact Monitoring',
-    description: 'Measure and manage your social responsibility initiatives, from labor practices to community engagement.',
-    icon: 'UserGroupIcon',
+    title: 'Tamper Detection',
+    description: 'Cryptographic verification and integrity monitoring for high-stakes regulatory submissions.',
+    icon: 'ShieldCheckIcon',
     href: '/solutions-hub'
   },
   {
-    title: 'Governance & Risk',
-    description: 'Strengthen corporate governance with transparent oversight and risk management tools.',
+    title: 'Risk Management',
+    description: 'Scenario modeling and threshold alerts to flag compliance issues before they become liabilities.',
     icon: 'ScaleIcon',
     href: '/solutions-hub'
   },
   {
-    title: 'AI-Powered Insights',
-    description: 'Leverage predictive analytics to identify optimization opportunities and reduce resource consumption.',
+    title: 'Bounded Claims',
+    description: 'Clear time windows and scope boundaries to ensure defensible and accurate reporting.',
     icon: 'BoltIcon',
     href: '/platform-overview'
   },
   {
-    title: 'Resource Management',
-    description: 'Optimize water, waste, and energy usage with granular tracking and efficiency recommendations.',
+    title: 'Operational Signals',
+    description: 'Capture validation from IoT sensors, utility meters, and ERP systems automatically.',
     icon: 'ArrowTrendingUpIcon',
     href: '/platform-overview'
   },
-   {
-    title: 'Audit-Ready Reporting',
-    description: 'Generate comprehensive, verifiable reports that build trust with investors and stakeholders.',
+  {
+    title: 'Review-Ready Packs',
+    description: 'Structured documentation bundles including manifests, methodology notes, and audit trails.',
     icon: 'ClipboardDocumentCheckIcon',
     href: '/standards-and-compliance'
   },
