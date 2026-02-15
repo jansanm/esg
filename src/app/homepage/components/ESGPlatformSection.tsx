@@ -18,7 +18,7 @@ const ESGPlatformSection = () => {
       ],
       conclusion: 'Reduce audit preparation costs by up to 60% while maintaining continuous compliance readiness.',
       icon: 'ShieldCheckIcon',
-      color: 'from-emerald-500 to-green-600',
+      color: 'from-emerald-500 to-emerald-700',
       link: '/solutions/esg-management'
     },
     {
@@ -36,7 +36,7 @@ const ESGPlatformSection = () => {
       ],
       conclusion: 'Built on the COSO ERM framework to protect enterprise value and support strategic planning.',
       icon: 'BuildingOfficeIcon',
-      color: 'from-emerald-500 to-green-600',
+      color: 'from-emerald-500 to-emerald-700',
       link: '/solutions/risk-management'
     },
     {
@@ -54,20 +54,24 @@ const ESGPlatformSection = () => {
       ],
       conclusion: 'Drive data-informed sustainability improvements and optimize supplier selection with verified data.',
       icon: 'ChartBarIcon',
-      color: 'from-emerald-500 to-green-600',
+      color: 'from-emerald-500 to-emerald-700',
       link: '/solutions/life-cycle-assessment'
     }
   ];
 
   return (
-    <section className="py-12 lg:py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-12 lg:py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-headline font-headline-bold text-foreground mb-4">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-500/20 mb-6 backdrop-blur-sm">
+            <span className="flex h-2 w-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
+            <span className="text-[10px] font-headline-bold text-emerald-700 uppercase tracking-[0.2em]">Core Technology</span>
+          </div>
+          <h2 className="text-3xl lg:text-5xl font-headline font-headline-bold text-foreground mb-6">
             Platform Capabilities
           </h2>
-          <p className="text-lg text-text-secondary font-body max-w-3xl mx-auto">
+          <p className="text-xl text-text-secondary font-body max-w-3xl mx-auto">
             EcoVeraZ is an evidence infrastructure platform that automates the creation of audit-ready ESG documentation.
           </p>
         </div>
@@ -77,39 +81,39 @@ const ESGPlatformSection = () => {
           {platforms.map((platform) => (
             <div
               key={platform.id}
-              className="flex flex-col bg-white rounded-3xl p-6 border-2 border-gray-100 shadow-sm hover:border-emerald-500/30 hover:shadow-2xl transition-all duration-300 group h-full"
+              className="flex flex-col bg-white rounded-3xl p-8 border-2 border-gray-100 shadow-sm hover:border-emerald-500/30 hover:shadow-2xl transition-all duration-300 group h-full"
             >
               {/* Icon & Title Group */}
-              <div className="flex flex-col items-center text-center mb-6">
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${platform.color} flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon name={platform.icon as any} size={28} className="text-white" />
+              <div className="flex flex-col items-center text-center mb-8">
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${platform.color} flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform duration-300`}>
+                  <Icon name={platform.icon as any} size={32} className="text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">
+                <h3 className="text-2xl font-headline-bold text-gray-900 mb-2">
                   {platform.title}
                 </h3>
-                <p className="text-emerald-600 font-bold text-[10px] uppercase tracking-wider">
+                <p className="text-emerald-700 font-headline-bold text-[10px] uppercase tracking-widest">
                   {platform.subtitle}
                 </p>
               </div>
 
               {/* Description */}
-              <p className="text-gray-600 text-sm text-center mb-6 leading-relaxed">
+              <p className="text-gray-600 text-sm text-center mb-8 leading-relaxed font-body">
                 {platform.description}
               </p>
 
               {/* Features List */}
-              <ul className="space-y-3 mb-6 flex-1 border-t border-gray-50 pt-6">
+              <ul className="space-y-4 mb-8 flex-1 border-t border-gray-50 pt-8">
                 {platform.features.map((feature, i) => (
-                  <li key={i} className="flex items-start text-[13px] text-gray-700">
-                    <Icon name="CheckCircleIcon" size={16} className="text-emerald-500 mr-2.5 mt-0.5 flex-shrink-0" />
+                  <li key={i} className="flex items-start text-[14px] text-gray-700 font-body">
+                    <Icon name="CheckCircleIcon" size={18} className="text-emerald-500 mr-3 mt-0.5 flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
               </ul>
 
               {/* Conclusion Box */}
-              <div className="bg-gray-50 rounded-xl p-3.5 mb-6 border border-gray-100">
-                <p className="text-[12px] text-gray-600 italic leading-relaxed">
+              <div className="bg-emerald-50/50 rounded-2xl p-5 mb-8 border border-emerald-100/50 group-hover:bg-emerald-50 transition-colors">
+                <p className="text-[13px] text-emerald-900 italic leading-relaxed font-body">
                   &quot;{platform.conclusion}&quot;
                 </p>
               </div>
@@ -117,10 +121,10 @@ const ESGPlatformSection = () => {
               {/* Action Link */}
               <Link
                 href={platform.link}
-                className="flex items-center justify-center text-emerald-600 font-bold text-sm hover:text-emerald-700 transition-colors pt-5 border-t border-gray-100 group gap-2"
+                className="flex items-center justify-center text-emerald-700 font-headline-bold text-sm hover:text-emerald-800 transition-colors pt-6 border-t border-gray-100 group gap-2"
               >
                 Explore Solution
-                <Icon name="ArrowRightIcon" size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+                <Icon name="ArrowRightIcon" size={18} className="ml-1 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           ))}

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Header from '@/components/common/Header';
+import ManufacturingProblemStatement from './components/ManufacturingProblemStatement';
 import PlatformHero from './components/PlatformHero';
 import PlatformStats from './components/PlatformStats';
 import PlatformDetailedContent from './components/PlatformDetailedContent';
@@ -20,6 +21,7 @@ export default function PlatformOverviewPage() {
   return (
     <main className="min-h-screen bg-background">
       <Header />
+      <ManufacturingProblemStatement />
       <PlatformHero />
       <PlatformDetailedContent />
       {/* <PlatformStats /> */}

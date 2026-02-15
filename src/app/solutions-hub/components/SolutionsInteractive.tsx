@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import HeroSection from './HeroSection';
+import ManufacturingProblems from './ManufacturingProblems';
 import SolutionsContent from './SolutionsContent';
 import CTASection from './CTASection';
 
@@ -28,6 +29,7 @@ const SolutionsInteractive = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <ManufacturingProblems />
       <HeroSection />
       <SolutionsContent />
       <CTASection />
